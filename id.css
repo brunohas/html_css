@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {background-image: linear-gradient(to top, #3C2F80, #6ACFC9, #FAEDDA);
+body {background-image: url('imagens/wallpaper001.jpg');
       font-family: 'Courier New', Courier, monospace;}
 
 main {background-image: linear-gradient(to bottom, #3C2F80, #6ACFC9, #FAEDDA);
@@ -31,3 +31,6 @@ p#voltar {text-align: center;}
 .avancado {color: rgb(197, 28, 28)}
 
 .destaque {background-color: rgb(245, 245, 245);}
+
+
+linear-gradient(to bottom, #3C2F80, #6ACFC9, #FAEDDA)
