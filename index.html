@@ -16,819 +16,814 @@
 <body>
     <h1>O básico do HTML5 e CSS3</h1>
     <hr>
-    <h2>&diams; Parágrafos e quebras de linha</h2>
-    <hr>
-    <p>
-        Você pode escrever um parágrafo de qualquer jeito, basta colocar tudo no meio do par de tags &lt;p&gt; e &lt;/p&gt;.
-    </p>
-    <p>
-        Se precisar quebrar o texto em algum lugar específico <br> como esse, você pode usar a tag &lt;br&gt;. E &nbsp; &lt;wbr&gt; &nbsp;para quebra de palavra.
-    </p> 
-    <h3 style="font-size: 18pt;">As principais formatações:</h3>
-    <h3>Negrito / Destaque</h3>
-    <p>
-        Nesta frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt; (não semântica). <br> Nesta frase temos um <strong>termo em destaque</strong> usando a tag &lt;strong&gt; (semântica).
-    </p>
-    <h3>Itálico / Ênfase</h3>
-    <p>
-        Nesta frase, temos um <i>termo em itálico</i> usando a tag &lt;i&gt; (não semântica). <br> Nesta frase, temos um <em>termo em ênfase</em> usando a tag &lt;em&gt; (semântica).
-    </p>
-    <h3>Texto Marcado</h3>
-    <p>
-        Podemos criar também um <mark>texto marcado</mark> usando a tag &lt;mark&gt; <br> E no outro parágrafo, temos outro <mark style="background-color: limegreen;">texto marcado</mark> no final.
-    </p>  <!--style='background-color' para mudar a cor da marcação-->
-    <h3>Texto grande e pequeno</h3>
-    <p>
-        Estamos criando um <big>texto grande</big> com a tag &lt;big&gt; porém vai ser descontinuada <br>E um <small>texto pequeno</small> com a tag &lt;small&gt; nesse parágrafo.
-    </p>
-    <h3>Texto deletado</h3>
-    <p>
-        Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado (usar a tag &lt;del&gt;).
-    </p>
-    <h3>Texto inserido</h3>
-    <p>
-        Podemos marcar <ins>um texto inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois (usar a tag &lt;ins&gt;) <br>Existe também o <u>sublinhado</u> com a tag &lt;u&gt; (não semântica).
-    </p>
-    <h3>Texto sobrescrito</h3>
-    <p>
-        Para inserir "textos elevados", coisas do tipo x<sup>20</sup>+3 (usar a tag &lt;sup&gt;).
-    </p>
-    <h3>Texto subscrito</h3>
-    <p>
-        Para inserir "textos abaixo", coisas do tipo H<sub>2</sub>0 (usar a tag &lt;sub&gt;).
-    </p>
-    <h3>Código-fonte / Pré-formatação</h3>
-    <p>
-        O comando &lt;code&gt; é para deixar as letras mais fáceis de se visualizar (deixa tudo do mesmo comprimento), exemplo: 
-    </p>
-    <p>
-        document.getElementById('teste') &rarr; sem o code <br><code>document.getElementById('teste')</code> &rarr; com o code
-    </p>
-    <p>
-        O comando &lt;pre&gt; (pré-formatação de texto) faz com que a identação fique igual a do programa, exemplo: 
-    </p>
-    <pre>
-        <code>
-    num = int(input('Digite um número: '))
-    if num % 2 == 0:
-        print(f'O número {num} é PAR')
-    else:
-        print(f'O número {num} é ÍMPAR')
-    print('Fim do Programa')
-        </code>
-    </pre>
-    <h3>Citações simples</h3>
-    <p>
-        Colocar a tag &lt;q&gt; quando for fazer uma citação (citar uma frase de um livro / citar uma frase de alguem / etc), exemplo: 
-    </p>
-    <p>
-        Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q>
-    </p>
-    <h3>Citações completas</h3>
-    <p>
-        Colocar a tag &lt;blockquote&gt; para também fazer uma citação, porém essa fica um pouco mais clara e conseguimos colocar da onde é a citação, exemplo: 
-    </p>
-    <p>
-        Segundo Machado de Assis, no livro Dom Casmurro: 
-    </p>
-    <blockquote cite="https://www.google.com.br/books/edition/Dom_Casmurro/D-ifw1p6Wm4C?hl=pt-BR&gbpv=1&dq=dom+casmurro&printsec=frontcover">        <!-- O cite (citando) serve para citar da onde é a citação, pode se colocar o nome do livro ou link do livro -->
-        A imaginação foi a companheira de toda a minha existência, viva, rápida, inquieta, alguma vez tímida e amiga de empacar, as mais delas, capaz de engolir campanhas e campanhas, correndo.
-    </blockquote>
-    <h3>Abreviações</h3>
-    <p>
-        A tag &lt;abbr&gt; serve para escrever o significado de uma palavra que está abreviada, exemplo: 
-    </p>
-    <p>
-        Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>, estou adorando!
-    </p>
-    <h3>Texto invertido</h3>
-    <p>
-        A tag &lt;bdo&gt; para inverter a frase, &lt;bdo dir="rtl"&gt; inverte a frase e a &lt;bdo dir="ltr"&gt; deixa a frase normal, exemplo:
-    </p>
-    <p>
-        <bdo dir="ltr">Estou aprendendo a criar coisas em HTML.</bdo> &rarr; com &lt;bdo dir="ltr"&gt; <br> <bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo> &rarr; com &lt;bdo dir="rtl"&gt;
-    </p>
-    <hr>
-    <h2>&diams; Símbolos e Emoji</h2>
-    <hr>
-    <p>Vamos adicionar alguns símbolos especiais: <br>
-        &reg;      <!--marca registrada-->
-        &copy;     <!--copyright-->
-        &trade;    <!--trademarking (TM)-->
-        &euro;     <!--símbolo Euro-->
-        &pound;    <!--símbolo Libra-->
-        &yen;      <!--símbolo Yen-->
-        &cent;     <!--c com risco-->
-        &Delta;    <!--delta maisculo-->
-        &delta;    <!--delta minusculo-->
-        &Lambda;   <!--'assassins creed'-->
-        &sum;      <!--símbolo de soma-->
-        &infin;    <!--símbolo do infinito-->
-        &times;    <!--símbolo x para multiplicação-->
-        &plusmn;   <!--símbolo mais ou menos-->
-        &oplus;    <!--símbolo de mais circulado-->
-        &radic;    <!--raiz-->
-        &ne;       <!--símbolo de diferente ou não igual-->
-        &omega;    <!--símbolo omega 'W'-->
-        &phi;      <!--o cortado-->
-        &larr;     <!--seta esquerda-->
-        &rarr;     <!--seta direita-->
-        &uarr;     <!--seta cima-->
-        &darr;     <!--seta baixo-->
-        &harr;     <!--seta 2 lados-->
-        &spades;   <!--naipe espadas-->
-        &clubs;    <!--naipe paus-->
-        &hearts;   <!--naipe copas-->
-        &diams;    <!--naipe ouros-->
-        &lt;       <!--menor que-->
-        &gt;       <!--maior que-->
-        &le;       <!--menor igual-->
-        &ge;       <!--maior igual-->
-        &nbsp;     <!--espaço em branco-->
-        &shy;      <!--quebra a palavra e coloca ifêm-->
-    </p>
-    <p>
-        Agora vamos adicionar emojis.
-    Procurar no site: <a href="https://emojipedia.org/" target="_blank" rel="external">https://emojipedia.org/</a> o código do emoji e colocar &#x no começo do código e finalizar com ; <br>
-    exemplo: &#x1F4B0; 
-             &#x1F911;
-    </p>
-    <hr>
-    <h2>&diams; Imagens</h2>
-    <hr>
-    <p>
-        Para pesquisar imagens, pode ser pelo google imagens mesmo, porém terá que escolher na opção que pesquise imagens sem direito autoral 'Marcadas para reutilização com modificação' ou 'Marcadas para reutilização' <br>
-    Outras formas de pesquisar é com os sites: <a href="https://unsplash.com/pt-br" target="_blank" rel="external">https://unsplash.com/pt-br</a> (pesquisar em inglês), <a href="https://www.pexels.com/pt-br/" target="_blank" rel="external">https://www.pexels.com/pt-br/</a> (pesquisar em inglês) ou <a href="https://www.freepik.com/" target="_blank" rel="external">https://www.freepik.com/</a>. Editar as fotos no GIMP <br>Para baixar as fotos, salvar imagem como... e salvar na área de trabalho com nome do arquivo em minúsculo para ficar mais fácil de analisar (JPEG imagem com fundo / PNG imagem com fundo transparente).
-    </p>
-    <p>
-        Para "formatar" a imagem para colocar no site: Abrir a imagem com o GIMP &rarr; Imagem &rarr; Redimencionar imagem &rarr; Mudar largura entre 100 (pequeno) e 1500 (grande) e clicar em TAB para recalcular a altura.
-    </p>
-    <p>
-        Abaixo você vai ver uma imagem que está na mesma pasta.
-    </p>
-    <img src="html5-100.png" alt="Logo HTML5">
-    <p>
-        Podemos também carregar imagens que estão em sub-pastas.
-    </p>
-    <img src="imagens/css3-100.png" alt="Logo CSS3">
-    <p>
-        Também podemos carregar imagens externas (direto do site, porém não tem como editar ela, fica um pouco pesado...).
-    </p>
-    <img src="https://static.vecteezy.com/system/resources/thumbnails/048/332/149/small/js-icon-transparent-background-free-png.png" alt="Logo JavaScript">
-    <p>
-        No site <a href="https://favicon.io/" target="_blank" rel="external">https://favicon.io/</a> conseguimos criar um icon para deixar no site (imagem que fica ao lado do título da página) <br>
-    Ou também podemos procurar por um icon já existente no site <a href="https://www.iconarchive.com/" target="_blank" rel="external">https://www.iconarchive.com/</a>.
-    </p>
-    <h3>Imagem dinâmica</h3>
-    <p>
-        Também conseguimos colocar imagens com a tag &lt;picture&gt;, melhor pois conseguimos "trocar" a imagem para que caiba na tela no usuário, utilizamos a tag &lt;picture&gt; e dentro dessa tag abrimos outra tag &lt;img&gt;. E ainda acrescentamos mais outra tag dentro da tag &lt;picture&gt;, para que conseguimos mudar a imagem &lt;source:media:type&gt; (trocar min-width: para max-width (colocar o tamanho da imagem em px)).
-    </p>
-    <p>
-        <a href="pag004.html" target="_self" rel="next">Clique aqui</a> para entender melhor sobre oque está escrito acima.
-    </p>
-    <hr>
-    <h2>&diams; Listas</h2>
-    <hr>
-    <p>
-        Para escrever qualquer tipo de lista, utiliza-se a tag &lt;li&gt; para indicar um item na lista.
-    </p>
-    <h3>Lista Ordenadas</h3>
-    <p>
-        Utiliza-se a tag &lt;ol&gt; para abrir a lista ordenada, também podemos mudar o ícone que fica na lista utilizando o "type" dentro da tag &lt;ol&gt;. Também conseguimos mudar em qual número/letra começa a lista utilizando o "start" dentro da tag &lt;ol&gt; <br> Tipos de type &rarr; (1 = lista numerada / A = lista alfabética maiúscula / a = lista alfabética minúscula / I = lista em número romano maiúscula / i = lista em número romano minúscula).
-    </p>
-    <ol>
-        <li>Acordar</li>
-        <li>Ir para faculdade</li>
-        <li>Ir para o trabalho</li>
-        <li>Voltar para casa</li>
-        <li>Dormir</li>
-    </ol>
-    <ol type="A">
-        <li>Acordar</li>
-        <li>Ir para faculdade</li>
-        <li>Ir para o trabalho</li>
-        <li>Voltar para casa</li>
-        <li>Dormir</li>
-    </ol>
-    <ol type="I">
-        <li>Acordar</li>
-        <li>Ir para faculdade</li>
-        <li>Ir para o trabalho</li>
-        <li>Voltar para casa</li>
-        <li>Dormir</li>
-    </ol>
-    <h3>Lista não Ordenadas</h3>
-    <p>
-        Utiliza-se a tag &lt;ul&gt; para abrir uma lista não ordenada, também podemos mudar o ícone que fica na lista utilizando o "type" dentro da tag &lt;ul&gt;. <br>Tipos de type &rarr; (disc = bolinha preta /  circle = bolinha branca / square = quadradinho).
-    </p>
-    <ul>
-        <li>Pão</li>
-        <li>Hambúrguer</li>
-        <li>Queijo</li>
-        <li>Alface</li>
-        <li>Bacon</li>
-    </ul>
-    <ul type="circle">
-        <li>Pão</li>
-        <li>Hambúrguer</li>
-        <li>Queijo</li>
-        <li>Alface</li>
-        <li>Bacon</li>
-    </ul>
-    <ul type="square">
-        <li>Pão</li>
-        <li>Hambúrguer</li>
-        <li>Queijo</li>
-        <li>Alface</li>
-        <li>Bacon</li>
-    </ul>
-    <h3>Listas compostas</h3>
-    <p>
-        Para fazer uma lista composta basta se atentar a identação, por exemplo: <br> Meus jogos favoritos de cada plataforma:
-    </p>
-    <ul>
-        <li>Nintendo</li>
+    <main>
+        <h2>&diams; Parágrafos e quebras de linha</h2>
+        <hr>
+        <p>
+            Você pode escrever um parágrafo de qualquer jeito, basta colocar tudo no meio do par de tags &lt;p&gt; e &lt;/p&gt;.
+        </p>
+        <p>
+            Se precisar quebrar o texto em algum lugar específico <br> como esse, você pode usar a tag &lt;br&gt;. E &nbsp; &lt;wbr&gt; &nbsp;para quebra de palavra.
+        </p>
+        <h3 style="font-size: 18pt;">As principais formatações:</h3>
+        <h3>Negrito / Destaque</h3>
+        <p>
+            Nesta frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt; (não semântica). <br> Nesta frase temos um <strong>termo em destaque</strong> usando a tag &lt;strong&gt; (semântica).
+        </p>
+        <h3>Itálico / Ênfase</h3>
+        <p>
+            Nesta frase, temos um <i>termo em itálico</i> usando a tag &lt;i&gt; (não semântica). <br> Nesta frase, temos um <em>termo em ênfase</em> usando a tag &lt;em&gt; (semântica).
+        </p>
+        <h3>Texto Marcado</h3>
+        <p>
+            Podemos criar também um <mark>texto marcado</mark> usando a tag &lt;mark&gt; <br> E no outro parágrafo, temos outro <mark style="background-color: limegreen;">texto marcado</mark> no final.
+        </p>  <!--style='background-color' para mudar a cor da marcação-->
+        <h3>Texto grande e pequeno</h3>
+        <p>
+            Estamos criando um <big>texto grande</big> com a tag &lt;big&gt; porém vai ser descontinuada <br>E um <small>texto pequeno</small> com a tag &lt;small&gt; nesse parágrafo.
+        </p>
+        <h3>Texto deletado</h3>
+        <p>
+            Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado (usar a tag &lt;del&gt;).
+        </p>
+        <h3>Texto inserido</h3>
+        <p>
+            Podemos marcar <ins>um texto inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois (usar a tag &lt;ins&gt;) <br>Existe também o <u>sublinhado</u> com a tag &lt;u&gt; (não semântica).
+        </p>
+        <h3>Texto sobrescrito</h3>
+        <p>
+            Para inserir "textos elevados", coisas do tipo x<sup>20</sup>+3 (usar a tag &lt;sup&gt;).
+        </p>
+        <h3>Texto subscrito</h3>
+        <p>
+            Para inserir "textos abaixo", coisas do tipo H<sub>2</sub>0 (usar a tag &lt;sub&gt;).
+        </p>
+        <h3>Código-fonte / Pré-formatação</h3>
+        <p>
+            O comando &lt;code&gt; é para deixar as letras mais fáceis de se visualizar (deixa tudo do mesmo comprimento), exemplo:
+        </p>
+        <p>
+            document.getElementById('teste') &rarr; sem o code <br><code>document.getElementById('teste')</code> &rarr; com o code
+        </p>
+        <p>
+            O comando &lt;pre&gt; (pré-formatação de texto) faz com que a identação fique igual a do programa, exemplo:
+        </p>
+        <pre>
+            <code>
+        num = int(input('Digite um número: '))
+        if num % 2 == 0:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é ÍMPAR')
+        print('Fim do Programa')
+            </code>
+        </pre>
+        <h3>Citações simples</h3>
+        <p>
+            Colocar a tag &lt;q&gt; quando for fazer uma citação (citar uma frase de um livro / citar uma frase de alguem / etc), exemplo:
+        </p>
+        <p>
+            Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q>
+        </p>
+        <h3>Citações completas</h3>
+        <p>
+            Colocar a tag &lt;blockquote&gt; para também fazer uma citação, porém essa fica um pouco mais clara e conseguimos colocar da onde é a citação, exemplo:
+        </p>
+        <p>
+            Segundo Machado de Assis, no livro Dom Casmurro:
+        </p>
+        <blockquote cite="https://www.google.com.br/books/edition/Dom_Casmurro/D-ifw1p6Wm4C?hl=pt-BR&gbpv=1&dq=dom+casmurro&printsec=frontcover">        <!-- O cite (citando) serve para citar da onde é a citação, pode se colocar o nome do livro ou link do livro -->
+            A imaginação foi a companheira de toda a minha existência, viva, rápida, inquieta, alguma vez tímida e amiga de empacar, as mais delas, capaz de engolir campanhas e campanhas, correndo.
+        </blockquote>
+        <h3>Abreviações</h3>
+        <p>
+            A tag &lt;abbr&gt; serve para escrever o significado de uma palavra que está abreviada, exemplo:
+        </p>
+        <p>
+            Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>, estou adorando!
+        </p>
+        <h3>Texto invertido</h3>
+        <p>
+            A tag &lt;bdo&gt; para inverter a frase, &lt;bdo dir="rtl"&gt; inverte a frase e a &lt;bdo dir="ltr"&gt; deixa a frase normal, exemplo:
+        </p>
+        <p>
+            <bdo dir="ltr">Estou aprendendo a criar coisas em HTML.</bdo> &rarr; com &lt;bdo dir="ltr"&gt; <br> <bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo> &rarr; com &lt;bdo dir="rtl"&gt;
+        </p>
+        <hr>
+        <h2>&diams; Símbolos e Emoji</h2>
+        <hr>
+        <p>Vamos adicionar alguns símbolos especiais: <br>
+            &reg;      <!--marca registrada-->
+            &copy;     <!--copyright-->
+            &trade;    <!--trademarking (TM)-->
+            &euro;     <!--símbolo Euro-->
+            &pound;    <!--símbolo Libra-->
+            &yen;      <!--símbolo Yen-->
+            &cent;     <!--c com risco-->
+            &Delta;    <!--delta maisculo-->
+            &delta;    <!--delta minusculo-->
+            &Lambda;   <!--'assassins creed'-->
+            &sum;      <!--símbolo de soma-->
+            &infin;    <!--símbolo do infinito-->
+            &times;    <!--símbolo x para multiplicação-->
+            &plusmn;   <!--símbolo mais ou menos-->
+            &oplus;    <!--símbolo de mais circulado-->
+            &radic;    <!--raiz-->
+            &ne;       <!--símbolo de diferente ou não igual-->
+            &omega;    <!--símbolo omega 'W'-->
+            &phi;      <!--o cortado-->
+            &larr;     <!--seta esquerda-->
+            &rarr;     <!--seta direita-->
+            &uarr;     <!--seta cima-->
+            &darr;     <!--seta baixo-->
+            &harr;     <!--seta 2 lados-->
+            &spades;   <!--naipe espadas-->
+            &clubs;    <!--naipe paus-->
+            &hearts;   <!--naipe copas-->
+            &diams;    <!--naipe ouros-->
+            &lt;       <!--menor que-->
+            &gt;       <!--maior que-->
+            &le;       <!--menor igual-->
+            &ge;       <!--maior igual-->
+            &nbsp;     <!--espaço em branco-->
+            &shy;      <!--quebra a palavra e coloca ifêm-->
+        </p>
+        <p>
+            Agora vamos adicionar emojis.
+        Procurar no site: <a href="https://emojipedia.org/" target="_blank" rel="external">https://emojipedia.org/</a> o código do emoji e colocar &#x no começo do código e finalizar com ; <br>
+        exemplo: &#x1F4B0;
+                 &#x1F911;
+        </p>
+        <hr>
+        <h2>&diams; Imagens</h2>
+        <hr>
+        <p>
+            Para pesquisar imagens, pode ser pelo google imagens mesmo, porém terá que escolher na opção que pesquise imagens sem direito autoral 'Marcadas para reutilização com modificação' ou 'Marcadas para reutilização' <br>
+        Outras formas de pesquisar é com os sites: <a href="https://unsplash.com/pt-br" target="_blank" rel="external">https://unsplash.com/pt-br</a> (pesquisar em inglês), <a href="https://www.pexels.com/pt-br/" target="_blank" rel="external">https://www.pexels.com/pt-br/</a> (pesquisar em inglês) ou <a href="https://www.freepik.com/" target="_blank" rel="external">https://www.freepik.com/</a>. Editar as fotos no GIMP <br>Para baixar as fotos, salvar imagem como... e salvar na área de trabalho com nome do arquivo em minúsculo para ficar mais fácil de analisar (JPEG imagem com fundo / PNG imagem com fundo transparente).
+        </p>
+        <p>
+            Para "formatar" a imagem para colocar no site: Abrir a imagem com o GIMP &rarr; Imagem &rarr; Redimencionar imagem &rarr; Mudar largura entre 100 (pequeno) e 1500 (grande) e clicar em TAB para recalcular a altura.
+        </p>
+        <p>
+            Abaixo você vai ver uma imagem que está na mesma pasta.
+        </p>
+        <img src="html5-100.png" alt="Logo HTML5">
+        <p>
+            Podemos também carregar imagens que estão em sub-pastas.
+        </p>
+        <img src="imagens/css3-100.png" alt="Logo CSS3">
+        <p>
+            Também podemos carregar imagens externas (direto do site, porém não tem como editar ela, fica um pouco pesado...).
+        </p>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/048/332/149/small/js-icon-transparent-background-free-png.png" alt="Logo JavaScript">
+        <p>
+            No site <a href="https://favicon.io/" target="_blank" rel="external">https://favicon.io/</a> conseguimos criar um icon para deixar no site (imagem que fica ao lado do título da página) <br>
+        Ou também podemos procurar por um icon já existente no site <a href="https://www.iconarchive.com/" target="_blank" rel="external">https://www.iconarchive.com/</a>.
+        </p>
+        <h3>Imagem dinâmica</h3>
+        <p>
+            Também conseguimos colocar imagens com a tag &lt;picture&gt;, melhor pois conseguimos "trocar" a imagem para que caiba na tela no usuário, utilizamos a tag &lt;picture&gt; e dentro dessa tag abrimos outra tag &lt;img&gt;. E ainda acrescentamos mais outra tag dentro da tag &lt;picture&gt;, para que conseguimos mudar a imagem &lt;source:media:type&gt; (trocar min-width: para max-width (colocar o tamanho da imagem em px)).
+        </p>
+        <p>
+            <a href="pag004.html" target="_self" rel="next">Clique aqui</a> para entender melhor sobre oque está escrito acima.
+        </p>
+        <hr>
+        <h2>&diams; Listas</h2>
+        <hr>
+        <p>
+            Para escrever qualquer tipo de lista, utiliza-se a tag &lt;li&gt; para indicar um item na lista.
+        </p>
+        <h3>Lista Ordenadas</h3>
+        <p>
+            Utiliza-se a tag &lt;ol&gt; para abrir a lista ordenada, também podemos mudar o ícone que fica na lista utilizando o "type" dentro da tag &lt;ol&gt;. Também conseguimos mudar em qual número/letra começa a lista utilizando o "start" dentro da tag &lt;ol&gt; <br> Tipos de type &rarr; (1 = lista numerada / A = lista alfabética maiúscula / a = lista alfabética minúscula / I = lista em número romano maiúscula / i = lista em número romano minúscula).
+        </p>
         <ol>
-            <li>Pokemon Fire Red</li>
-            <li>Super Mario Kart</li>
-            <li>Kurby Super Stars</li>
+            <li>Acordar</li>
+            <li>Ir para faculdade</li>
+            <li>Ir para o trabalho</li>
+            <li>Voltar para casa</li>
+            <li>Dormir</li>
         </ol>
-        <li>XBOX</li>
         <ol type="A">
-            <li>Gears Of War 2</li>
-            <li>Red Dead Redemption</li>
-            <li>Prototype</li>
+            <li>Acordar</li>
+            <li>Ir para faculdade</li>
+            <li>Ir para o trabalho</li>
+            <li>Voltar para casa</li>
+            <li>Dormir</li>
         </ol>
-        <li>PlayStation
         <ol type="I">
-            <li>Call of Duty</li>
-            <li>Grand Theft Auto</li>
-            <li>Apex Legends</li>
+            <li>Acordar</li>
+            <li>Ir para faculdade</li>
+            <li>Ir para o trabalho</li>
+            <li>Voltar para casa</li>
+            <li>Dormir</li>
         </ol>
-        </li>
-    </ul>
-    <h3>Lista de Definições</h3>
-    <p>
-        Utilizar a tag &lt;dl&gt; para abrir a lista &lt;dt&gt; para o item da lista e &lt;dd&gt; para a descrição do item, por exemplo: 
-    </p>
-    <dl>
-        <dt>HTML</dt>
-        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
-        <dt>CSS</dt>
-        <dd>Linguagem de marcação para a criação do desing de um site.</dd>
-        <dt>JavaScript</dt>
-        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
-    </dl>
-    <hr>
-    <h2>&diams; Trabalhando com Links</h2>
-    <hr>
-    <h3>Links externos</h3>
-    <p>
-        Para utilizar links externos usar a tag &lt;a&gt;, assim abrindo um parâmetro dentro da tag para colocar o link desejado. <br>
-    Você pode acessar esse <a href="https://www.youtube.com/watch?v=V1bFr2SWP1I" rel="external">link</a> para ouvir um clássico, porém com a tag assim o link abre na mesma página do site ("fechando" o site).
-    </p>
-    <p>
-        Para abrir links externos sem fechar o site utilizamos outros parâmetros dentro da tag, incluir ( target="_blank" para abrir em uma nova janela em branco / target="_self" para abrir sobre a página / rel="external" para identificar que é um link externo). <br>Colocando esses parâmetros na tag o <a href="https://www.youtube.com/watch?v=V1bFr2SWP1I" target="_blank" rel="external">link</a> fica assim.
-    </p>
-    <h3>Links internos</h3>
-    <p>
-        Para links internos também utiliza a tag &lt;a&gt;, e colocamos o link da página que deseja. Utilizar os parâmetros rel para identificar para que o link sugerido serve (rel="next" &rarr; próxima página / rel="prev" &rarr; página anterior / rel="nofollow" &rarr; "fala" para o mecânismo de busca que você não da o aval do conteúdo do link).
-    </p>
-    <p>
-        Clique no <a href="pag002.html" rel="next">link</a> para saber como voltar de pasta.
-    </p>
-    <p>
-        Na <a href="pag3/pag003.html" rel="next">terceira página</a> mostra como volta.
-    </p>
-    <hr>
-    <h2>&diams; Áudio</h2>
-    <hr>
-    <h3>Reproduzindo áudio</h3>
-    <p>
-        Para reproduzir áudios MP3 no HTML5 utiliza-se a tag &lt;audio&gt;, e também é preciso colocar os parâmetros <em>autoplay</em> para tocar a música assim que carregar a página (não é obrigatório), <em>controls</em> para aparecer um "controle" para dar play/pause e aumentar ou diminuir o volume do áudio, <em>loop</em> para o áudio se repetir (usa-se normalmete quando o áudio é curto).
-    </p>
-    <audio src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" controls></audio>
-    <p>
-        Também existe outros tipos de formatos de áudio (WAV, OGG) ver se tem compatibilidade com o navegador. Outra maneira de reproduzir áudios também é com a tag &lt;audio&gt;, porém não é necessário o parâmetro que já vem incluso (pode apagar o src="") e acrescentar o parâmetro preload="" (preload="auto" só considera que a página carregou depois de carregar todo o áudio (não recomendado) / preload="metadata" só carrega o nome, data, duração do arquivo / preload="none" só carrega quando o usuário apertar play no controle). Depois colocar a tag &lt;source:src&gt;, assim abrindo outro parâmetro type="", para áudios em MP3 colocar o type="audio/mpeg" / para áudios em WAV colocar o type="audio/wav" / para áudios em OGG colocar o type="OGG".
-    </p>
-    <audio controls>
-        <source src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" type="audio/mpeg">
-        <source src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" type="audio/wav">
-        <source src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" type="audio/ogg">
+        <h3>Lista não Ordenadas</h3>
         <p>
-            Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3">Clique aqui</a> para baixar o arquivo MP3. <!-- Só irá mostrar se não conseguir produzir o áudio -->
+            Utiliza-se a tag &lt;ul&gt; para abrir uma lista não ordenada, também podemos mudar o ícone que fica na lista utilizando o "type" dentro da tag &lt;ul&gt;. <br>Tipos de type &rarr; (disc = bolinha preta /  circle = bolinha branca / square = quadradinho).
         </p>
-    </audio>
-    <hr>
-    <h2>&diams; Vídeos</h2>
-    <hr>
-    <p>
-        Sempre se atentar com a compatibilidade com os navegadores. Os formatos mais utilizados em vídeos são o MP4 e M4V, existem outros como WebM (que é um arquivo bem pequeno, porém não tem muita qualidade de vídeo) e OGV (um formato que está intimamente ligado ao OGG, pode ser utilizado para armazenamento ou transmissão na web).
-    </p>
-    <p>
-        Para pesquisar vídeos, podemos também utilizar o site <a href="https://www.pexels.com/pt-br/"> https://www.pexels.com/pt-br/</a> que é o mesmo para pesquisar imagens (sempre lembrar dos direitos autorais). Para converter/formatar um vídeo utilizamos o aplicativo HandBrake (só converte para MP4, M4V e WebM / para converter para OGV basta pesquisar no google "conversor ogv"), serve para converter o vídeo em algum outro tipo de arquivo para que o vídeo fique mais leve, ou para o vídeo ficar com uma resolução melhor. Não é indicado hospedar um arquivo muito no grande no site, pois o custo fica muito caro. Se for colocar algum arquivo muito pesado, é indicado colocar ele como um link externo.
-    </p>
-    <h3>Vídeos hospedados localmente (dentro do servidor)</h3>
-    <p>
-        Vídeos hospedados localmente, consomem muitos dados do servidor, assim ficando mais caro para hospedar.
-    </p>
-    <p>
-        Para reproduzir vídeo no site, utiliza-se a tag &lt;video&gt; (se o vídeo não couber na tela, você pode editar/formatar ou adicionar um parâmetro <em>width=""</em> e colocar em quantos px o vídeo vai ficar), colocar parâmetro <em>controls</em> para mostrar um controle para dar play/pause ou aumentar/diminuir o volume. 
-    </p>
-    <!-- <video src="midia/video-drift.mp4" controls></video> para colocar somente um tipo de arquivo (abaixo consigo colocar mais doq um tipo de arquivo para que se não funcionar um, abra o outro) -->   
-    <video controls>
-        <source src="midia/video-drift-600.webm" type="video/webm">
-        <source src="midia/video-drift-600.mp4" type="video/mp4">
-        <source src="midia/video-drift-600.ogv" type="video/ogv">
+        <ul>
+            <li>Pão</li>
+            <li>Hambúrguer</li>
+            <li>Queijo</li>
+            <li>Alface</li>
+            <li>Bacon</li>
+        </ul>
+        <ul type="circle">
+            <li>Pão</li>
+            <li>Hambúrguer</li>
+            <li>Queijo</li>
+            <li>Alface</li>
+            <li>Bacon</li>
+        </ul>
+        <ul type="square">
+            <li>Pão</li>
+            <li>Hambúrguer</li>
+            <li>Queijo</li>
+            <li>Alface</li>
+            <li>Bacon</li>
+        </ul>
+        <h3>Listas compostas</h3>
         <p>
-            Infelizmente seu navegador não consegue reproduzir o vídeo. <a href="midia/video-drift.mp4.mp4">Clique aqui</a> para baixar o arquivo. <!-- Só irá mostrar se não conseguir produzir o vídeo -->
+            Para fazer uma lista composta basta se atentar a identação, por exemplo: <br> Meus jogos favoritos de cada plataforma:
         </p>
-    </video>
-    <h3>Vídeos hospedados externamente</h3>
-    <p>
-        Os vídeos hospedados externamente tem como "benefício" não utilizar os dados do servidor para carregar o vídeo, assim ficando mais barato para hospedar.
-    </p>
-    <ul>
-        <li>Vídeos do Youtube &rarr; Para conseguir inserir um vídeo do Youtube no site, basta clicar em compartilhar no vídeo desejado e clicar em Incorporar (monta um código HTML), depois só copiar e colar o código (conseguimos mudar o tamanho para ser exibido, basta alterar o código).</li>
-    </ul>
-    <iframe width="600" height="338" src="https://www.youtube.com/embed/pIC0zh5oV7w?si=WFkskYg6onecAOvx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <ul>
-        <li>Vídeos do Vimeo &rarr; Para conseguir inserir um vídeo do Vimeo no site, basícamente é igual a do Youtube, porém o Vímeo é um aplicativo pago. (Não coloquei nenhum vídeo pois não tenho conta)</li>
-    </ul>
-    <hr>
-    <h2>&diams; Estilos CSS</h2>
-    <hr>
-    <p>
-        O CSS é quem da o desing para página, permite a formatação de páginas web. O CSS é utilizado para alterar cor do texto e do fundo; alterar a fonte; alterar o espaçamento entre parágrafos; criar tabelas; usar variações de layouts; ajustar imagens para suas respectivas telas; cria efeitos, profundidade, animações; cria página interativas e até jogos. O CSS é aplicado diretamente nas tags HTML ou fica contido dentro das tags &lt;style&gt;. Também é possível adicionar estilos adicionando um link para um arquivo CSS que contém estilos: 
-    </p>
-    <pre>
-        <code>
-    <mark>&lt;style="color: ;"&gt;</mark> &rarr; Muda a cor da letra (colocar em inglês)
-    <mark>&lt;style="font-size: ;"&gt;</mark> &rarr; Muda o tamanho da letra, número em px (ex: 20px) ou em (ex: 1em)
-    <mark>&lt;style="font-style: ;"&gt;</mark> &rarr; Muda o estilo da letra (itálico)
-    <mark>&lt;style="font-family: ;"&gt;</mark> &rarr; Muda o tipo da letra, (ex: arial, monospace, verdana, corrier, etc)
-    <mark>&lt;style="font-weight: ;"&gt;</mark> &rarr; Muda o "peso" da letra, deixa mais fino, mais grosso (não são todas as fontes que tem essa opção) / (lighter &rarr; leve / normal &rarr; normal / bold &rarr; pesado / bolder &rarr; mais pesado)
-    <mark>&lt;style="background-color: ;"&gt;</mark> &rarr; Muda a cor de fundo (colocar em inglês)
-    <mark>&lt;style="background-image: linear-gradient ;"&gt;</mark> &rarr; Faz um degradê em linha no fundo 
-    <mark>&lt;style="backgorund-image: radial-gradient ;"&gt;</mark> &rarr; Faz um degradê em circulo no fundo
-    <mark>&lt;style="text-shadow: (n°px n°px n°px cor sombra);"&gt;</mark> &rarr; Coloca uma sombra (primeiro n°px: número negativo a sombra fica para esquerda, número positivo a sombra fica para direita / segundo n°px: número negativo a <br>sombra fica para cima, número positivo a sombra fica para baixo / terceiro n°px: não utiliza número negativo, quanto maior o número a sombra fica mais embaçada e transparente)
-    <mark>&lt;style="text-align: ;"&gt;</mark> &rarr; Conseguimos mudar o texto de lugar, colocar no centro, no canto, etc... 
-    <mark>&lt;style="text-decoration: ;"&gt;</mark> &rarr; Coloca uma linha decorativa (overline &rarr; linha encima da letra / underline &rarr; linha de baixo da letra / line-through &rarr; linha riscando a letra)
-
-    <mark>&lt;style="font: ;"&gt;</mark> &rarr; É o conjunto dos estilos <em>font-style &rarr; font-weight &rarr; font-size &rarr; font-family</em> (colocar os parâmetro nessa mesma ordem). <br> Ex: 
-        &lt;style="font: italic normal 1.5em 'Arial', sans-serif;&gt; é a mesma coisa que <br>
-        &lt;style=font-style: italic;
-               font-weight: normal;
-               font-size: 1.5em;
-               font-family: 'Arial', sans-serif;
-        </code>
-    </pre>
-    <p>
-        Agora <a href="tags.html" rel="next" target="_self">clique aqui</a> para ir na página que tem algumas tags em HTML e CSS.
-    </p>
-    <h3>Inline</h3>
-    <p>
-        O estilo <strong><em>inline</em></strong> não é muito recomendado pois tem que abrir a tag &lt;style&gt; para cada parâmetro, por exemplo:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Estilo CSS Inline&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 <mark>style="color: white; background-color: gray;"</mark>&gt;Estilo Inline&lt;/h1&gt;
-        &lt;p <mark>style="color: black; background-color: white;"</mark>&gt;
-            O estilo Inline não é muito recomendado pois tem que abrir a tag &lt;style&gt; para cada tag.
-        &lt;/p&gt;
-    &lt;/body&gt;
-        </code>
-    </pre>
-    <h3>Internos / Locais</h3>
-    <p>
-        O estilo <strong><em>interno / local</em></strong> abre a tag &lt;style&gt; dentro da área de cabeça (&lt;head&gt;) e assim abrindo chaves para cada parâmetro que deseja mudar (muda todos os mesmos parâmetros junto,ex: se colocar no &lt;h1&gt; irá mudar todos os &lt;h1&gt; / se colocar no &lt;p&gt; irá mudar todos os &lt;p&gt;), por exemplo:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Estilo CSS Internos / Locais&lt;/title&gt;
-        <mark>&lt;style&gt;</mark>
-            <mark>body {background-color: gray;</mark>
-                  <mark>font-family: monospace;</mark>
-                  <mark>font-size: 20px;}</mark>
-            <mark>h1 {color: black;</mark>
-                <mark>font-family: arial;}</mark>
-            <mark>p {font-family: monospace;</mark>
-               <mark>text-align: justify;}</mark>
-        <mark>&lt;/style&gt;</mark>
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Estilo Internos / Locais&lt;/h1&gt;
-        &lt;p&gt;
-            O estilo interno / local abre a tag &lt;style&gt; dentro da área de cabeça (&lt;head&gt;).
-        &lt;/p&gt;
-    &lt;/body&gt;        
-        </code>
-    </pre>
-    <h3>Externos</h3>
-    <p>
-        O estilo <strong><em>externo</em></strong> é mais versátil, pois utiliza-se um arquivo separado só para colocar os estilos, utilizar a tag &lt;link:css&gt; dentro da área de cabeça (&lt;head&gt;), ele também muda todos os parâmetros junto, igual ao estilo interno (se mudar o &lt;h1&gt; irá mudar todos os &lt;h1&gt; / se colocar no &lt;p&gt; irá mudar todos os &lt;p&gt;, etc...). Depois é só colocar as configurações dentro do arquivo (.css) que foi criado, por exemplo:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Estilo CSS Externos&lt;/title&gt;
-        <mark>&lt;link rel="stylesheet" href="nome do arquivo"&gt;</mark>
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Estilo Externos&lt;/h1&gt;
-        &lt;p&gt;
-            O estilo externo é mais versátil, pois utiliza-se um arquivo separado só para colocar os estilos, utilizar a tag &lt;link:css&gt; dentro da área de cabeça (&lt;head&gt;).
-        &lt;/p&gt;
-    &lt;/body&gt;        
-        </code>
-    </pre>
-    <hr>
-    <h2>&diams; Cores</h2>
-    <hr>
-    <p>
-        Para colocar cores no site, utilizamos o tag &lt;style&gt; (pode ser dentro da cabeça (&lt;head&gt;) ou dentro do parâmetro escolhido). Conseguimos colocar as cores de algumas formas, pelo nome (em inglês), por código hexadecimais, <abbr title="Red Green Blue">RGB</abbr> ou HSL <abbr title="Tom Saturação Luminosidade">(Hue Saturation Lightness)</abbr>. Também conseguimos mudar a transparencia da cor, podemos utilizar o RGBA ou HSLA. Segue alguns exemplos da mesma cor, porém de jeito diferente de se aplicar:
-    </p>
-    <h3>Por nomes (em inglês)</h3>
-    <p>
-        Para colocar cores pelo nome, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...) e digitamos a nome da cor em inglês. <br>Ex:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Cores por nome&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 <mark>style="color: white; background-color: blue;"</mark>&gt;Por nome&lt;/h1&gt;
-        &lt;p <mark>style="color: white; background-color: blue;"</mark>&gt;
-            Para colocar cores pelo nome, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar e digitamos o nome da cor em inglês.
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p>
-        Que no caso ficaria assim:
-    </p>
-    <h1 style="color: white; background-color: blue; text-align: left;">Por nome</h1>
-    <p style="color: white; background-color: blue;">
-        Para colocar cores pelo nome, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o nome da cor em inglês.
-    </p>
-    <h3>Por código hexadecimal</h3>
-    <p>
-        Para colocar cores pelo código hexadecimal, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o código. Para ficar mais fácil, utilizamos o aplicativo GIMP (o mesmo para edição de fotos) para saber qual o código de cada cor. <br>Ex:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Cores por código hexadecimal&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 <mark>style="color: #ffffff; background-color: #0000ff;"</mark>&gt;Por código hexadecimal&lt;/h1&gt;
-        &lt;p <mark>style="color: #ffffff; background-color: #0000ff;"</mark>&gt;
-            Para colocar cores pelo código hexadecimal, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o código. Para ficar mais fácil, utilizamos <br>            o aplicativo GIMP (o mesmo para edição de fotos) para saber qual o código de cada cor.
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p>
-        Que no caso ficaria assim:
-    </p>
-    <h1 style="color: #ffffff; background-color: #0000ff; text-align: left;">Por código hexadecimal</h1>
-    <p style="color: #ffffff; background-color: #0000ff;">
-        Para colocar cores pelo código hexadecimal, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o código. Para ficar mais fácil, utilizamos o aplicativo GIMP (o mesmo para edição de fotos) para saber qual o código de cada cor.
-    </p>
-    <h3>RGB / RGBA</h3>
-    <p>
-        Para colocar cores pelo RGB, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos rgb(n°, n°, n°) o primeiro número é a cor vermelha (0 a 255) / o segundo número é a cor verde (0 a 255) / o terceiro número é a cor azul (0 a 255). Para utilizar o RGBA, acrescentamos mais um número, que seria o da transparência vai de 0 à 1 (0 totalmente transparênte, 1 totalmente visível). <br>Ex:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Cores por RGB/RGBA&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 <mark>style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);"</mark>&gt;Por RGB / RGBA&lt;/h1&gt;
-        &lt;p <mark>style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);"</mark>&gt;
-            Para colocar cores pelo RGB, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos rgb(n°, n°, n°) o primeiro número é a cor vermelha (0 a 255)<br> / o segundo número é a cor verde (0 a 255) / o terceiro número é a cor azul (0 a 255).
-        &lt;/p&gt;
-        &lt;p <mark>style="color: rgba(255, 255, 255, 1); background-color: rgba(0, 0, 255, 0.5)</mark>&gt;
+        <ul>
+            <li>Nintendo</li>
+            <ol>
+                <li>Pokemon Fire Red</li>
+                <li>Super Mario Kart</li>
+                <li>Kurby Super Stars</li>
+            </ol>
+            <li>XBOX</li>
+            <ol type="A">
+                <li>Gears Of War 2</li>
+                <li>Red Dead Redemption</li>
+                <li>Prototype</li>
+            </ol>
+            <li>PlayStation
+            <ol type="I">
+                <li>Call of Duty</li>
+                <li>Grand Theft Auto</li>
+                <li>Apex Legends</li>
+            </ol>
+            </li>
+        </ul>
+        <h3>Lista de Definições</h3>
+        <p>
+            Utilizar a tag &lt;dl&gt; para abrir a lista &lt;dt&gt; para o item da lista e &lt;dd&gt; para a descrição do item, por exemplo:
+        </p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para a criação do desing de um site.</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+        </dl>
+        <hr>
+        <h2>&diams; Trabalhando com Links</h2>
+        <hr>
+        <h3>Links externos</h3>
+        <p>
+            Para utilizar links externos usar a tag &lt;a&gt;, assim abrindo um parâmetro dentro da tag para colocar o link desejado. <br>
+        Você pode acessar esse <a href="https://www.youtube.com/watch?v=V1bFr2SWP1I" rel="external">link</a> para ouvir um clássico, porém com a tag assim o link abre na mesma página do site ("fechando" o site).
+        </p>
+        <p>
+            Para abrir links externos sem fechar o site utilizamos outros parâmetros dentro da tag, incluir ( target="_blank" para abrir em uma nova janela em branco / target="_self" para abrir sobre a página / rel="external" para identificar que é um link externo). <br>Colocando esses parâmetros na tag o <a href="https://www.youtube.com/watch?v=V1bFr2SWP1I" target="_blank" rel="external">link</a> fica assim.
+        </p>
+        <h3>Links internos</h3>
+        <p>
+            Para links internos também utiliza a tag &lt;a&gt;, e colocamos o link da página que deseja. Utilizar os parâmetros rel para identificar para que o link sugerido serve (rel="next" &rarr; próxima página / rel="prev" &rarr; página anterior / rel="nofollow" &rarr; "fala" para o mecânismo de busca que você não da o aval do conteúdo do link).
+        </p>
+        <p>
+            Clique no <a href="pag002.html" rel="next">link</a> para saber como voltar de pasta.
+        </p>
+        <p>
+            Na <a href="pag3/pag003.html" rel="next">terceira página</a> mostra como volta.
+        </p>
+        <hr>
+        <h2>&diams; Áudio</h2>
+        <hr>
+        <h3>Reproduzindo áudio</h3>
+        <p>
+            Para reproduzir áudios MP3 no HTML5 utiliza-se a tag &lt;audio&gt;, e também é preciso colocar os parâmetros <em>autoplay</em> para tocar a música assim que carregar a página (não é obrigatório), <em>controls</em> para aparecer um "controle" para dar play/pause e aumentar ou diminuir o volume do áudio, <em>loop</em> para o áudio se repetir (usa-se normalmete quando o áudio é curto).
+        </p>
+        <audio src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" controls></audio>
+        <p>
+            Também existe outros tipos de formatos de áudio (WAV, OGG) ver se tem compatibilidade com o navegador. Outra maneira de reproduzir áudios também é com a tag &lt;audio&gt;, porém não é necessário o parâmetro que já vem incluso (pode apagar o src="") e acrescentar o parâmetro preload="" (preload="auto" só considera que a página carregou depois de carregar todo o áudio (não recomendado) / preload="metadata" só carrega o nome, data, duração do arquivo / preload="none" só carrega quando o usuário apertar play no controle). Depois colocar a tag &lt;source:src&gt;, assim abrindo outro parâmetro type="", para áudios em MP3 colocar o type="audio/mpeg" / para áudios em WAV colocar o type="audio/wav" / para áudios em OGG colocar o type="OGG".
+        </p>
+        <audio controls>
+            <source src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" type="audio/mpeg">
+            <source src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" type="audio/wav">
+            <source src="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3" type="audio/ogg">
+            <p>
+                Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/THE BOX MEDLEY FUNK 2 (part. MC Brinquedo, MC Tuto, MC Laranjinha e MC Cebezinho) ( Clipe Oficial ).mp3">Clique aqui</a> para baixar o arquivo MP3. <!-- Só irá mostrar se não conseguir produzir o áudio -->
+            </p>
+        </audio>
+        <hr>
+        <h2>&diams; Vídeos</h2>
+        <hr>
+        <p>
+            Sempre se atentar com a compatibilidade com os navegadores. Os formatos mais utilizados em vídeos são o MP4 e M4V, existem outros como WebM (que é um arquivo bem pequeno, porém não tem muita qualidade de vídeo) e OGV (um formato que está intimamente ligado ao OGG, pode ser utilizado para armazenamento ou transmissão na web).
+        </p>
+        <p>
+            Para pesquisar vídeos, podemos também utilizar o site <a href="https://www.pexels.com/pt-br/"> https://www.pexels.com/pt-br/</a> que é o mesmo para pesquisar imagens (sempre lembrar dos direitos autorais). Para converter/formatar um vídeo utilizamos o aplicativo HandBrake (só converte para MP4, M4V e WebM / para converter para OGV basta pesquisar no google "conversor ogv"), serve para converter o vídeo em algum outro tipo de arquivo para que o vídeo fique mais leve, ou para o vídeo ficar com uma resolução melhor. Não é indicado hospedar um arquivo muito no grande no site, pois o custo fica muito caro. Se for colocar algum arquivo muito pesado, é indicado colocar ele como um link externo.
+        </p>
+        <h3>Vídeos hospedados localmente (dentro do servidor)</h3>
+        <p>
+            Vídeos hospedados localmente, consomem muitos dados do servidor, assim ficando mais caro para hospedar.
+        </p>
+        <p>
+            Para reproduzir vídeo no site, utiliza-se a tag &lt;video&gt; (se o vídeo não couber na tela, você pode editar/formatar ou adicionar um parâmetro <em>width=""</em> e colocar em quantos px o vídeo vai ficar), colocar parâmetro <em>controls</em> para mostrar um controle para dar play/pause ou aumentar/diminuir o volume.
+        </p>
+        <!-- <video src="midia/video-drift.mp4" controls></video> para colocar somente um tipo de arquivo (abaixo consigo colocar mais doq um tipo de arquivo para que se não funcionar um, abra o outro) -->
+        <video controls>
+            <source src="midia/video-drift-600.webm" type="video/webm">
+            <source src="midia/video-drift-600.mp4" type="video/mp4">
+            <source src="midia/video-drift-600.ogv" type="video/ogv">
+            <p>
+                Infelizmente seu navegador não consegue reproduzir o vídeo. <a href="midia/video-drift.mp4.mp4">Clique aqui</a> para baixar o arquivo. <!-- Só irá mostrar se não conseguir produzir o vídeo -->
+            </p>
+        </video>
+        <h3>Vídeos hospedados externamente</h3>
+        <p>
+            Os vídeos hospedados externamente tem como "benefício" não utilizar os dados do servidor para carregar o vídeo, assim ficando mais barato para hospedar.
+        </p>
+        <ul>
+            <li>Vídeos do Youtube &rarr; Para conseguir inserir um vídeo do Youtube no site, basta clicar em compartilhar no vídeo desejado e clicar em Incorporar (monta um código HTML), depois só copiar e colar o código (conseguimos mudar o tamanho para ser exibido, basta alterar o código).</li>
+        </ul>
+        <iframe width="600" height="338" src="https://www.youtube.com/embed/pIC0zh5oV7w?si=WFkskYg6onecAOvx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <ul>
+            <li>Vídeos do Vimeo &rarr; Para conseguir inserir um vídeo do Vimeo no site, basícamente é igual a do Youtube, porém o Vímeo é um aplicativo pago. (Não coloquei nenhum vídeo pois não tenho conta)</li>
+        </ul>
+        <hr>
+        <h2>&diams; Estilos CSS</h2>
+        <hr>
+        <p>
+            O CSS é quem da o desing para página, permite a formatação de páginas web. O CSS é utilizado para alterar cor do texto e do fundo; alterar a fonte; alterar o espaçamento entre parágrafos; criar tabelas; usar variações de layouts; ajustar imagens para suas respectivas telas; cria efeitos, profundidade, animações; cria página interativas e até jogos. O CSS é aplicado diretamente nas tags HTML ou fica contido dentro das tags &lt;style&gt;. Também é possível adicionar estilos adicionando um link para um arquivo CSS que contém estilos:
+        </p>
+        <pre>
+            <code>
+        <mark>&lt;style="color: ;"&gt;</mark> &rarr; Muda a cor da letra
+        <mark>&lt;style="font-size: ;"&gt;</mark> &rarr; Muda o tamanho da letra
+        <mark>&lt;style="font-style: ;"&gt;</mark> &rarr; Muda o estilo da letra
+        <mark>&lt;style="font-family: ;"&gt;</mark> &rarr; Muda o tipo da letra
+        <mark>&lt;style="font-weight: ;"&gt;</mark> &rarr; Muda o "peso" da letra
+        <mark>&lt;style="background-color: ;"&gt;</mark> &rarr; Muda a cor de fundo
+        <mark>&lt;style="background-image: linear-gradient ;"&gt;</mark> &rarr; Faz um degradê em linha no fundo
+        <mark>&lt;style="backgorund-image: radial-gradient ;"&gt;</mark> &rarr; Faz um degradê em circulo no fundo
+        <mark>&lt;style="text-shadow: (n°px n°px n°px cor sombra);"&gt;</mark> &rarr; Coloca uma sombra
+        <mark>&lt;style="text-align: ;"&gt;</mark> &rarr; alinhamento do texto
+        <mark>&lt;style="text-decoration: ;"&gt;</mark> &rarr; Coloca uma linha decorativa
+            </code>
+        </pre>
+        <p>
+            Agora <a href="tags.html" rel="next" target="_self">clique aqui</a> para ir na página que tem algumas tags em HTML e CSS.
+        </p>
+        <h3>Inline</h3>
+        <p>
+            O estilo <strong><em>inline</em></strong> não é muito recomendado pois tem que abrir a tag &lt;style&gt; para cada parâmetro, por exemplo:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Estilo CSS Inline&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1 <mark>style="color: white; background-color: gray;"</mark>&gt;Estilo Inline&lt;/h1&gt;
+            &lt;p <mark>style="color: black; background-color: white;"</mark>&gt;
+                O estilo Inline não é muito recomendado pois tem que abrir a tag &lt;style&gt; para cada tag.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <h3>Internos / Locais</h3>
+        <p>
+            O estilo <strong><em>interno / local</em></strong> abre a tag &lt;style&gt; dentro da área de cabeça (&lt;head&gt;) e assim abrindo chaves para cada parâmetro que deseja mudar (muda todos os mesmos parâmetros junto,ex: se colocar no &lt;h1&gt; irá mudar todos os &lt;h1&gt; / se colocar no &lt;p&gt; irá mudar todos os &lt;p&gt;), por exemplo:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Estilo CSS Internos / Locais&lt;/title&gt;
+            <mark>&lt;style&gt;</mark>
+                <mark>body {background-color: gray;</mark>
+                      <mark>font-family: monospace;</mark>
+                      <mark>font-size: 20px;}</mark>
+                <mark>h1 {color: black;</mark>
+                    <mark>font-family: arial;}</mark>
+                <mark>p {font-family: monospace;</mark>
+                   <mark>text-align: justify;}</mark>
+            <mark>&lt;/style&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Estilo Internos / Locais&lt;/h1&gt;
+            &lt;p&gt;
+                O estilo interno / local abre a tag &lt;style&gt; dentro da área de cabeça (&lt;head&gt;).
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <h3>Externos</h3>
+        <p>
+            O estilo <strong><em>externo</em></strong> é mais versátil, pois utiliza-se um arquivo separado só para colocar os estilos, utilizar a tag &lt;link:css&gt; dentro da área de cabeça (&lt;head&gt;), ele também muda todos os parâmetros junto, igual ao estilo interno (se mudar o &lt;h1&gt; irá mudar todos os &lt;h1&gt; / se colocar no &lt;p&gt; irá mudar todos os &lt;p&gt;, etc...). Depois é só colocar as configurações dentro do arquivo (.css) que foi criado, por exemplo:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Estilo CSS Externos&lt;/title&gt;
+            <mark>&lt;link rel="stylesheet" href="nome do arquivo"&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Estilo Externos&lt;/h1&gt;
+            &lt;p&gt;
+                O estilo externo é mais versátil, pois utiliza-se um arquivo separado só para colocar os estilos, <br>utilizar a tag &lt;link:css&gt; dentro da área de cabeça (&lt;head&gt;).
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <hr>
+        <h2>&diams; Cores</h2>
+        <hr>
+        <p>
+            Para colocar cores no site, utilizamos o tag &lt;style&gt; (pode ser dentro da cabeça (&lt;head&gt;) ou dentro do parâmetro escolhido). Conseguimos colocar as cores de algumas formas, pelo nome (em inglês), por código hexadecimais, <abbr title="Red Green Blue">RGB</abbr> ou HSL <abbr title="Tom Saturação Luminosidade">(Hue Saturation Lightness)</abbr>. Também conseguimos mudar a transparencia da cor, podemos utilizar o RGBA ou HSLA. Segue alguns exemplos da mesma cor, porém de jeito diferente de se aplicar:
+        </p>
+        <h3>Por nomes (em inglês)</h3>
+        <p>
+            Para colocar cores pelo nome, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...) e digitamos a nome da cor em inglês. <br>Ex:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Cores por nome&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1 <mark>style="color: white; background-color: blue;"</mark>&gt;Por nome&lt;/h1&gt;
+            &lt;p <mark>style="color: white; background-color: blue;"</mark>&gt;
+                Para colocar cores pelo nome, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar e digitamos o nome da cor em inglês.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <h1 style="color: white; background-color: blue; text-align: left;">Por nome</h1>
+        <p style="color: white; background-color: blue;">
+            Para colocar cores pelo nome, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o nome da cor em inglês.
+        </p>
+        <h3>Por código hexadecimal</h3>
+        <p>
+            Para colocar cores pelo código hexadecimal, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o código. Para ficar mais fácil, utilizamos o aplicativo GIMP (o mesmo para edição de fotos) para saber qual o código de cada cor. <br>Ex:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Cores por código hexadecimal&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1 <mark>style="color: #ffffff; background-color: #0000ff;"</mark>&gt;Por código hexadecimal&lt;/h1&gt;
+            &lt;p <mark>style="color: #ffffff; background-color: #0000ff;"</mark>&gt;
+                Para colocar cores pelo código hexadecimal, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar <br>(se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o código. Para ficar mais fácil, utilizamos o <br>aplicativo GIMP (o mesmo para edição de fotos) para saber qual o código de cada cor.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <h1 style="color: #ffffff; background-color: #0000ff; text-align: left;">Por código hexadecimal</h1>
+        <p style="color: #ffffff; background-color: #0000ff;">
+            Para colocar cores pelo código hexadecimal, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos o código. Para ficar mais fácil, utilizamos o aplicativo GIMP (o mesmo para edição de fotos) para saber qual o código de cada cor.
+        </p>
+        <h3>RGB / RGBA</h3>
+        <p>
+            Para colocar cores pelo RGB, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos rgb(n°, n°, n°) o primeiro número é a cor vermelha (0 a 255) / o segundo número é a cor verde (0 a 255) / o terceiro número é a cor azul (0 a 255). Para utilizar o RGBA, acrescentamos mais um número, que seria o da transparência vai de 0 à 1 (0 totalmente transparênte, 1 totalmente visível). <br>Ex:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Cores por RGB/RGBA&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1 <mark>style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);"</mark>&gt;Por RGB / RGBA&lt;/h1&gt;
+            &lt;p <mark>style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);"</mark>&gt;
+                Para colocar cores pelo RGB, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, <br>cor da letra, cor da sombra, etc...), e digitamos rgb(n°, n°, n°) o primeiro número é a cor vermelha (0 a 255) / o <br>segundo número é a cor verde (0 a 255) / o terceiro número é a cor azul (0 a 255).
+            &lt;/p&gt;
+            &lt;p <mark>style="color: rgba(255, 255, 255, 1); background-color: rgba(0, 0, 255, 0.5)</mark>&gt;
+                Só para mostrar a transparência do RGBA.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <h1 style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255); text-align: left;">Por RGB / RGBA</h1>
+        <p style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);">
+            Para colocar cores pelo RGB, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos rgb(n°, n°, n°) o primeiro número é a cor vermelha (0 a 255) / o segundo número é a cor verde (0 a 255) / o terceiro número é a cor azul (0 a 255).
+        </p>
+        <p style="color: rgb(255, 255, 255); background-color: rgba(0, 0, 255, 0.3);">
             Só para mostrar a transparência do RGBA.
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p>
-        Que no caso ficaria assim:
-    </p>
-    <h1 style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255); text-align: left;">Por RGB / RGBA</h1>
-    <p style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);">
-        Para colocar cores pelo RGB, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos rgb(n°, n°, n°) o primeiro número é a cor vermelha (0 a 255) / o segundo número é a cor verde (0 a 255) / o terceiro número é a cor azul (0 a 255).
-    </p>
-    <p style="color: rgb(255, 255, 255); background-color: rgba(0, 0, 255, 0.3);">
-        Só para mostrar a transparência do RGBA.
-    </p>
-    <h3>HSL / HSLA</h3>
-    <p>
-        Para colocar cores pelo HSL, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos hsl(n°, n°%, n°%) o primeiro número é o tom (0 a 255) / o segundo número é a saturação (0% a 100%) / o terceiro número é a luminosidade (0% a 100%). Para utilizar o HSLA, acrescentamos mais um número, que seria o da transparência vai de 0 à 1 (0 totalmente transparênte, 1 totalmente visível). <br>Ex:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Cores por HSL/HSLA&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 <mark>style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%);"</mark>&gt;Por HSL / HSLA&lt;/h1&gt;
-        &lt;p <mark>style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%);"</mark>&gt;
-            Para colocar cores pelo HSL, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos hsl(n°, n°%, n°%) o primeiro número é o tom (0 a 359) / <br>            o segundo número é a saturação (0% a 100%) / o terceiro número é a luminosidade (0% a 100%).
-        &lt;/p&gt;
-        &lt;p <mark>style="color: hsla(255, 255, 255, 1); background-color: hsla(0, 0, 255, 0.5)</mark>&gt;
+        </p>
+        <h3>HSL / HSLA</h3>
+        <p>
+            Para colocar cores pelo HSL, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos hsl(n°, n°%, n°%) o primeiro número é o tom (0 a 255) / o segundo número é a saturação (0% a 100%) / o terceiro número é a luminosidade (0% a 100%). Para utilizar o HSLA, acrescentamos mais um número, que seria o da transparência vai de 0 à 1 (0 totalmente transparênte, 1 totalmente visível). <br>Ex:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Cores por HSL/HSLA&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1 <mark>style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%);"</mark>&gt;Por HSL / HSLA&lt;/h1&gt;
+            &lt;p <mark>style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%);"</mark>&gt;
+                Para colocar cores pelo HSL, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, <br>cor da letra, cor da sombra, etc...), e digitamos hsl(n°, n°%, n°%) o primeiro número é o tom (0 a 359) / o segundo <br>número é a saturação (0% a 100%) / o terceiro número é a luminosidade (0% a 100%).
+            &lt;/p&gt;
+            &lt;p <mark>style="color: hsla(255, 255, 255, 1); background-color: hsla(0, 0, 255, 0.5)</mark>&gt;
+                Só para mostrar a transparência do HSLA.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <h1 style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%); text-align: left;">Por HSL / HSLA</h1>
+        <p style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%);">
+            Para colocar cores pelo HSL, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos hsl(n°, n°%, n°%) o primeiro número é o tom (0 a 359) / o segundo número é a saturação (0% a 100%) / o terceiro número é a luminosidade (0% a 100%).
+        </p>
+        <p style="color: rgb(255, 255, 255); background-color: hsla(240, 100%, 50%, 0.3);">
             Só para mostrar a transparência do HSLA.
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p>
-        Que no caso ficaria assim:
-    </p>
-    <h1 style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%); text-align: left;">Por HSL / HSLA</h1>
-    <p style="color: hsl(0, 0%, 100%); background-color: hsl(240, 100%, 50%);">
-        Para colocar cores pelo HSL, abrimos a tag &lt;style&gt;, escolhemos oque queremos mudar (se é o fundo, cor da letra, cor da sombra, etc...), e digitamos hsl(n°, n°%, n°%) o primeiro número é o tom (0 a 359) / o segundo número é a saturação (0% a 100%) / o terceiro número é a luminosidade (0% a 100%).
-    </p>
-    <p style="color: rgb(255, 255, 255); background-color: hsla(240, 100%, 50%, 0.3);">
-        Só para mostrar a transparência do HSLA.
-    </p>
-    <p>
-        Para saber mais detalhado sobre cores <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/13%20-%20Cores.pdf" target="_blank" rel="external">clique aqui.</a>
-    </p>
-    <h3>Degradê</h3>
-    <p>
-        Para conseguir fazer um degradê de cores, utilizamos o parâmetro <em>background-image: linear-gradient</em> dentro da tag &lt;style&gt;, (sempre utilizar <em>* {height: 100%;}</em> (configuração global das CSS) / <em>background-attachment: fixed;</em> (para deixar o fundo fixo) dentro da tag &lt;style&gt;) o linear-gradient serve para dar a direção do degradê (to top: para cima / to bottom: para baixo / to left: para esquerda / to right: para direita), também conseguimos utilizar ângulo para o direcionamento do degradê (ex: <em>background-image: linear-gradient(45deg, blue, black);</em>)
-    </p>
-    <p>
-        Também conseguimos mudar a forma em que o degradê ficará, <em>background-image: linear-gradient(...)</em> para ficar em linha, <em>background-image: radial-gradient(circle)</em> para ficar em círculo.
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Degradê de Cores&lt;/title&gt;
-        &lt;style&gt;
-            body {background-image: linear-gradient(to right, #3198E2, #6D59D0, #E33F5F, #FDD579);
-                  background-attachment: fixed;}
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;p&gt;
-            Testando degradê
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p>
-        <a href="degrade.html" rel="next">Clique aqui</a> para ir para a página editada com degradê (se quiser editar, editar no arquivo <em>degrade.html</em> e <em>degrade.css</em>).
-    </p>
-    <p>
-        Agora segue algumas ferramentas úteis para fazer a hârmonia de cores:
-    </p>
-    <ul>
-        <a href="https://color.adobe.com/pt/create/color-wheel" rel="external" target="_blank"><li>Adobe Color</li></a>
-        <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" rel="external" target="_blank"><li>Paletton</li></a>
-        <a href="https://coolors.co/" rel="external" target="_blank"><li>Coolors</li></a>
-    </ul>
-    <hr>
-    <h2>&diams; Fontes</h2>
-    <hr>
-    <h3>Tipos de Fontes</h3>
-    <p>
-        Nem todo computador tem todos os tipos de fonte, por isso, na hora de escolher a fonte para o site, colocar mais de um tipo da mesma fonte e também colocar a família da fonte por último, pois se o dispositivo não achar essa fonte, ela pula para a outra. Os 3 tipos de família de fonte mais utilizadas são: <em>sans-serif</em> (sem serifa), <em>serif</em> (serifada) e <em>monospace</em> (monoespaçada &rarr; letras e caracteres ocupam o mesmo espaço horizontal). <br>Ex:
-    </p>
-    <ul>
-        <li style="font-family: sans-serif;">Fonte sem serifa (sans-serif)</li>
+        </p>
+        <p>
+            Para saber mais detalhado sobre cores <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/13%20-%20Cores.pdf" target="_blank" rel="external">clique aqui.</a>
+        </p>
+        <h3>Degradê</h3>
+        <p>
+            Para conseguir fazer um degradê de cores, utilizamos o parâmetro <em>background-image: linear-gradient</em> dentro da tag &lt;style&gt;, (sempre utilizar <em>* {height: 100%;}</em> (configuração global das CSS) / <em>background-attachment: fixed;</em> (para deixar o fundo fixo) dentro da tag &lt;style&gt;) o linear-gradient serve para dar a direção do degradê (to top: para cima / to bottom: para baixo / to left: para esquerda / to right: para direita), também conseguimos utilizar ângulo para o direcionamento do degradê (ex: <em>background-image: linear-gradient(45deg, blue, black);</em>)
+        </p>
+        <p>
+            Também conseguimos mudar a forma em que o degradê ficará, <em>background-image: linear-gradient(...)</em> para ficar em linha, <em>background-image: radial-gradient(circle)</em> para ficar em círculo.
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Degradê de Cores&lt;/title&gt;
+            &lt;style&gt;
+                body {background-image: linear-gradient(to right, #3198E2, #6D59D0, #E33F5F, #FDD579);
+                      background-attachment: fixed;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;
+                Testando degradê
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            <a href="degrade.html" rel="next">Clique aqui</a> para ir para a página editada com degradê (se quiser editar, editar no arquivo <em>degrade.html</em> e <em>degrade.css</em>).
+        </p>
+        <p>
+            Agora segue algumas ferramentas úteis para fazer a hârmonia de cores:
+        </p>
         <ul>
-            <li style="font-family: Arial;">Arial &rarr; AaBbCc</li>
-            <li style="font-family: Verdana;">Verdana &rarr; AaBbCc</li>
-            <li style="font-family: Trebuchet MS;">Trebuchet MS &rarr; AaBbCc</li>
-            <li style="font-family: sans-serif;">sans-serif &rarr; AaBbCc (todas as fontes sem serifa / sempre colocar por último)</li>
+            <a href="https://color.adobe.com/pt/create/color-wheel" rel="external" target="_blank"><li>Adobe Color</li></a>
+            <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" rel="external" target="_blank"><li>Paletton</li></a>
+            <a href="https://coolors.co/" rel="external" target="_blank"><li>Coolors</li></a>
         </ul>
-        <li style="font-family: serif;">Fonte serifada (serif)</li>
+        <hr>
+        <h2>&diams; Fontes</h2>
+        <hr>
+        <h3>Tipos de Fontes</h3>
+        <p>
+            Nem todo computador tem todos os tipos de fonte, por isso, na hora de escolher a fonte para o site, colocar mais de um tipo da mesma fonte e também colocar a família da fonte por último, pois se o dispositivo não achar essa fonte, ela pula para a outra. Os 3 tipos de família de fonte mais utilizadas são: <em>sans-serif</em> (sem serifa), <em>serif</em> (serifada) e <em>monospace</em> (monoespaçada &rarr; letras e caracteres ocupam o mesmo espaço horizontal). <br>Ex:
+        </p>
         <ul>
-            <li style="font-family: Times New Roman;">Times New Roman &rarr; AaBbCc</li>
-            <li style="font-family: Georgia;">Georgia &rarr; AaBbCc</li>
-            <li style="font-family: serif;">serif &rarr; AaBbCc (todas as fontes serifadas / sempre colocar por último)</li>
+            <li style="font-family: sans-serif;">Fonte sem serifa (sans-serif)</li>
+            <ul>
+                <li style="font-family: Arial;">Arial &rarr; AaBbCc</li>
+                <li style="font-family: Verdana;">Verdana &rarr; AaBbCc</li>
+                <li style="font-family: Trebuchet MS;">Trebuchet MS &rarr; AaBbCc</li>
+                <li style="font-family: sans-serif;">sans-serif &rarr; AaBbCc (todas as fontes sem serifa / sempre colocar por último)</li>
+            </ul>
+            <li style="font-family: serif;">Fonte serifada (serif)</li>
+            <ul>
+                <li style="font-family: Times New Roman;">Times New Roman &rarr; AaBbCc</li>
+                <li style="font-family: Georgia;">Georgia &rarr; AaBbCc</li>
+                <li style="font-family: serif;">serif &rarr; AaBbCc (todas as fontes serifadas / sempre colocar por último)</li>
+            </ul>
+            <li style="font-family: monospace;">Fonte monoespaçada (monospace)</li>
+            <ul>
+                <li style="font-family: Courier New;">Corrier New &rarr; AaBbCc</li>
+                <li style="font-family: monospace;">monospace &rarr; AaBbCc (todas as fontes monoespaçadas / sempre colocar em último)</li>
+            </ul>
         </ul>
-        <li style="font-family: monospace;">Fonte monoespaçada (monospace)</li>
+        <p>
+            Outros tipos de fontes que não são muito utilizadas são as fontes cursivas (simulam manuscrito) e fantasia ou fantasy (fontes decorativas). <br>Ex:
+        </p>
         <ul>
-            <li style="font-family: Courier New;">Corrier New &rarr; AaBbCc</li>
-            <li style="font-family: monospace;">monospace &rarr; AaBbCc (todas as fontes monoespaçadas / sempre colocar em último)</li>
+            <li style="font-family: cursive">Fonte cursiva (cursive)</li>
+            <ul>
+                <li style="font-family: cursive;">cursive &rarr; AaBbCc (todas as fontes cursivas)</li>
+            </ul>
+            <li style="font-family: fantasy;">Fonte fantasia (fantasy)</li>
+            <ul>
+                <li style="font-family: fantasy;">fantasy &rarr; AaBbCc (todas as fontes fantasia)</li>
+            </ul>
         </ul>
-    </ul>
-    <p>
-        Outros tipos de fontes que não são muito utilizadas são as fontes cursivas (simulam manuscrito) e fantasia ou fantasy (fontes decorativas). <br>Ex:
-    </p>
-    <ul>
-        <li style="font-family: cursive">Fonte cursiva (cursive)</li>
-        <ul>
-            <li style="font-family: cursive;">cursive &rarr; AaBbCc (todas as fontes cursivas)</li>
-        </ul>
-        <li style="font-family: fantasy;">Fonte fantasia (fantasy)</li>
-        <ul>
-            <li style="font-family: fantasy;">fantasy &rarr; AaBbCc (todas as fontes fantasia)</li>
-        </ul>
-    </ul>
-    <p>
-        No site <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" rel="external" target="_blank">https://www.w3schools.com/cssref/css_websafe_fonts.php</a> existem alguns exemplos de fontes combinadas.
-    </p>
-    <h3>Fontes do Google</h3>
-    <p>
-        Também conseguimos importar uma fonte do site <a href="https://fonts.google.com/" rel="external" target="_blank">https://fonts.google.com/</a>, basta selecionar a fonte, e copiar o @import clicando na opção <em>Get font</em> &rarr; <em>Get embed code</em>, depois colar na tag &lt;style&gt; (tem que ser no estilo interno / local), e também colocar em qual tag você deseja essa fonte. <br>Ex:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Fontes do Google&lt;/title&gt;
-        <mark>&lt;style&gt;</mark>
-            <mark>@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Rubik+Vinyl&display=swap');</mark>
-            <mark>@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');</mark>
-        <mark>&lt;/style&gt;</mark>
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;p <mark>style="font-family: 'Rubik Vinyl'; text-shadow: 1px 1px 2px black; font-size: 1.5em;"</mark>&gt;
+        <p>
+            No site <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" rel="external" target="_blank">https://www.w3schools.com/cssref/css_websafe_fonts.php</a> existem alguns exemplos de fontes combinadas.
+        </p>
+        <h3>Fontes do Google</h3>
+        <p>
+            Também conseguimos importar uma fonte do site <a href="https://fonts.google.com/" rel="external" target="_blank">https://fonts.google.com/</a>, basta selecionar a fonte, e copiar o @import clicando na opção <em>Get font</em> &rarr; <em>Get embed code</em>, depois colar na tag &lt;style&gt; (tem que ser no estilo interno / local), e também colocar em qual tag você deseja essa fonte. <br>Ex:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Fontes do Google&lt;/title&gt;
+            <mark>&lt;style&gt;</mark>
+                <mark>@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Rubik+Vinyl&display=swap');</mark>
+                <mark>@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');</mark>
+            <mark>&lt;/style&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p <mark>style="font-family: 'Rubik Vinyl'; text-shadow: 1px 1px 2px black; font-size: 1.5em;"</mark>&gt;
+                Segue o exemplo de importação de uma fonte do Google Fonts.
+            &lt;/p&gt;
+            &lt;p <mark>style="font-family: Comforter Brush; font-size: 2em;"</mark>&gt;
+                Segue o exemplo de importação de outra fonte do Google Fonts.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p style="font-family: 'Rubik Vinyl'; text-shadow: 1px 1px 2px black; font-size: 1.5em;">
             Segue o exemplo de importação de uma fonte do Google Fonts.
-        &lt;/p&gt;
-        &lt;p <mark>style="font-family: Comforter Brush; font-size: 2em;"</mark>&gt;
+        </p>
+        <p style="font-family: Comforter Brush; font-size: 2em;">
             Segue o exemplo de importação de outra fonte do Google Fonts.
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p style="font-family: 'Rubik Vinyl'; text-shadow: 1px 1px 2px black; font-size: 1.5em;">
-        Segue o exemplo de importação de uma fonte do Google Fonts.
-    </p>
-    <p style="font-family: Comforter Brush; font-size: 2em;">
-        Segue o exemplo de importação de outra fonte do Google Fonts.
-    </p>
-    <h3>Fontes Externas</h3>
-    <p>
-        Existem também outros sites que conseguimos pegar outras fontes, <a href="https://www.dafont.com/pt/" rel="external" target="_blank">Dafont</a> é um deles. Sempre na hora de escolher uma fonte, se atentar a ver se tem todas as letras, letras acentuadas, números e outros caracteres. Depois de baixar o arquivo.zip, extrair na mesma pasta do código-fonte e colocar @font-face dentro da tag &lt;style&gt; no estilo interno / local, irá abrir 2 parâmetros: font-family &rarr; nome para a fonte (colocar entre '')/ src: url(); &rarr; colocar o nome igual a do arquivo extraído, depois acrescentar outro parâmetro format() &rarr; opentype (otf) / truetype (ttf) / embedded-opentype / truetype-aat (Apple Advanced Typography) / svg, colocar de acordo com o arquivo extraído. <br>Ex:
-    </p>
-    <pre>
-        <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Fontes Externas&lt;/title&gt;
-        <mark>&lt;style&gt;</mark>
-            <mark>@font-face {font-family: 'OldLondon';</mark>
-            <mark>src: url('fonts/OldLondon.ttf') format('truetype'), url('fonts/OldLondonAlternate.ttf') format('truetype'), url('fonts/Olondon_.otf') format('opentype'), url('fonts/Olondona.otf') format('opentype');}</mark>
-        <mark>&lt;/style&gt;</mark>
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;p <mark>style="font-family: 'OldLondon'; font-size: 2.5em;"</mark>&gt;
-            Segue o exemplo de importação de uma fonte externa.
-        &lt;/p&gt;
-    &lt;/body&gt;      
-        </code>
-    </pre>
-    <p style="font-family: OldLondon; font-size: 2.5em;">
-        Segue o exemplo de uma importação de uma fonte externa.
-    </p>
-    <h3>Tamanho da Fonte</h3>
-    <p>
-        Para mudar o tamanho da fonte, utilizamos o parâmetro <em>font-size</em> dentro da tag &lt;style&gt;, existem 2 tipos de medidas:
-    </p>
-    <ul>
-        <li>Medidas Absolutas &rarr; cm (centímetro), mm (milímetro), in (polegada), px (pixel), pt (ponto), pc (paica).</li>
-        <li>Medidas Relativas &rarr; em (relativo a altura normal da fonte (M)), ex (relativo a altura x de um fonte (x)), rem (relativo ao hoot que esta configurada no body), vw (viewport &rarr; porcentagem da tela), vh (altura da viewport), % (porcentagem).</li>
-    </ul>
-    <p>
-        O mais recomendo é utilizar o <em>px</em> (pixel) ou <em>em</em> (relativo a altura normal), a medida <em>em</em> depende da fonte, por exemplo: 
-    </p>
-    <ul>
-        <li>Em um elemento com a fonte de <strong>16px</strong>, <strong>1em</strong> será <strong>16px</strong>, <strong>2em</strong> será <strong>32px</strong>, <strong>0.5em</strong> será <strong>8px</strong>, etc...</li>
-        <li>Em um elemento com a fonte de <strong>2in</strong>, <strong>1em</strong> será <strong>2in</strong>, <strong>2em</strong> será <strong>4in</strong>, <strong>0.5em</strong> será <strong>1in</strong>, etc...</li>
-    </ul>
-    <h3>Detectando uma fonte de um site</h3>
-    <p>
-        Para conseguir localizar uma fonte de um site, utilizar o Fonts Ninja (extensão do Google Chrome), basta entrar no site em que você deseja saber qual a fonte, e clicar no ícone do Fonts Ninja. Enquanto a extensão estiver aberta, basta passar o mouse encima do texto para saber qual sua fonte, tamanho, cor, etc...
-    </p>
-    <h3>Detectando uma fonte de uma imagem</h3>
-    <p>
-        Para conseguir localizar uma fonte de uma imagem, utilizamos os sites <a href="https://www.whatfontis.com/" rel="external" target="_blank">WhatFontIs</a> ou <a href="https://www.fontsquirrel.com/matcherator" rel="external" target="_blank">FontSquirrel</a> ou <a href="https://www.myfonts.com/pages/whatthefont" rel="external" target="_blank">MyFonts</a>. Basicamente todos funcionam arrastando a imagem até a área do site, e depois fazer algumas edições para a imagem ficar melhor de se visualizar.
-    </p>
-    <h3>Alinhamento de textos</h3>
-    <p>
-        Existem 3 tipos de alinhamentos, utilizamos o parâmetro text-aling para colocar o texto na esquerda (text-aling: left;), na direita (text-aling: right;) ou no centro (text-aling: center;). Também conseguimos utilizar o text-aling: justify; para fazer o alinhamento do texto nos 2 lados. E para fazer aquele espaço no começo do parágrafo, utilizar o parâmetro text-indent: (número de pixel) Ex &rarr; text-indent: 20px. Não esquecer que todos esses parâmetros de CSS tem que estar dentro da tag &lt;style&gt;.
-    </p>
-    <h3>Usando id com CSS</h3>
-    <p>
-        O id serve para identificar um parâmetro, por exemplo, em um código existem mais de 1 &lt;h1&gt;, o primeiro &lt;h1&gt; é o título do site, e os outros são os títulos do texto, para identificar que o primeiro &lt;h1&gt; não vai ter as mesmas características, abrimos um parâmetro (id="principal") dentro da tag &lt;h1&gt;. E depois abrimos um parâmetro (h1#principal) dentro da tag &lt;style&gt; para conseguir mudar as características desejadas. <a href="id.html" rel="next" target="_self">Clique aqui</a> para ir na página de exemplo (olhar os arquivos id.html e id.css para entender melhor). (OBS: em HTML é id = em CSS é # / em HTML é class = em CSS é .).
-    </p>
-    <h3>Usando class com CSS</h3>
-    <p>
-        O id só podemos utilizar 1 vez por página, já o class, conseguimos utilizar para mais de um parâmetro. Em HTML colocar o class dentro do parâmetro desejado, e dar um nome a ele, e em CSS colocar um ponto (.) e o nome dado para conseguir colocar os estilos desejados. <a href="id.html" rel="next" target="_self">Clique aqui</a> para ir na página de exemplo (olhar os arquivos id.html e id.css para entender melhor). Também conseguimos colocar mais de um class em um mesmo parâmetro, ex: "nostrum nisi" no parágrafo do HTML básico (tag &lt;span&gt; serve para estilizar e manipular partes específicas do texto).
-    </p>
-    <h3>Pseudo-classes com CSS</h3>
-    <p>
-        Enquanto o id utiliza (#), o class utiliza (.), as pseudo-classes utilizam (:) no CSS. As pseudo-classes são usadas para definir um estado especial de um elemento. Utilizar no elemento em que você deseja, alguns tipos de pseudo-class:
-    </p>
-    <ul>
-        <li>:hover &rarr; passa o mouse por cima</li>
-        <li>:visited &rarr; link visitado</li>
-        <li>:active &rarr; link ativado (quando clica)</li>
-    </ul>
-    <h3>Pseudo-elemento com CSS</h3>
-    <p>
-        O pseudo-elemento pode agir nas classes, nos elementos, nas ids, mexem no conteúdo periférico do elemento. Para pseudo-elemento utilizar (::), conseguimos colocar conteúdo sem o HTML, normalmente utiliza (::before / ::after) para saber se é para colocar o conteúdo antes ou depois.
-    </p>
-    <p style="font-family: monospace;">
-        Símbolos que podemos usar na CSS que vimos:<br># = id<br>. = class<br>:  = pseudo-class<br>:: = pseudo-element<br>> = children (filho)
-    </p>
-    <hr>
-    <h2>&diams; Modelos de Caixas</h2>
-    <hr>
-    <p>
-        É aplicavel ao HTML e CSS, é um conjunto para facilitar a organização do site. Básicamente cada caixa é o conteúdo que está em uma tag, por exemplo, &lt;h1&gt;Olá, Mundo!&lt;/h1&gt; &rarr; Olá, Mundo! (é a caixa). A caixa tem um tamanho e é especificado em 2 medidas muito importantes: height (altura), width (largura). Também existem outras medidas: border (borda), padding(acolchoamento / preenchimento), outline(contorno / traçado), margin(margem). Segue a anatomia de uma caixa:
-    </p>
-    <p id="imagem">
-        <img src="imagens/modelo-de-caixa.png" alt="Modelo de Caixa"> <br>Para entender melhor, na página do navegador pressionar Ctrl + Shift + i ou clicar com o mouse direito na página e clicar em "Inspecionar" para abrir o DevTools. (Se editar no Devtools, não edita no código original.)
-    </p>
-    <h3>Tipos de Caixa</h3>
-    <p>
-        box-level &rarr; é uma caixa que quebra de linha, ocupa o tamanho inteiro (widht), e quebra a linha para dar a continuidade do conteúdo. Exemplo de tags: &lt;div&gt; / &lt;h1&gt;~&lt;h6&gt; / &lt;p&gt; / &lt;main&gt; / &lt;header&gt; / &lt;nav&gt; / &lt;video&gt;.
-    </p>
-    <p>
-        inline-level &rarr; é uma caixa que não quebra a linha, não ocupa o tamanho inteiro, e da a continuidade do conteúdo na mesma linha. Exemplo de tags: &lt;span&gt; / &lt;a&gt; / &lt;code&gt; / &lt;strong&gt; / &lt;em&gt; / &lt;sub&gt; / &lt;sup&gt;.
-    </p>
-    <p>
-        Também conseguimos mudar um box-level para inline-level e vice-versa, basta acrescentar um parâmetro display: (display: block &rarr; box-level / display: inline &rarr; inline-level).
-    </p>
-    <hr>
-    <h2>&diams; Responsividade para sites</h2>
-    <hr>
-    <p>
-        A responsividade de um site é a capacidade de se adaptar a diferentes tamanhos de tela. O objetivo é proporcionar uma boa experiência de visualização ao usuário, independentemente do dispositivo que esteja sendo utilizado. Para saber melhor a medida ou visualizar em tela de celular, utilizar a extensão do Google Chrome Window Resizer.
-    </p>    
-    <p>    
-        Para criar essa responsividade, utilizamos os parâmetros min-width: 0px; (largura mínima da tela) e max-width: 0px; (largura máxima da tela). Normalmente a largura mínima será de 320px (pois é a largura de alguns celulares mais antigos). Caso tenha uma imagem, adicionar o parâmetro somente para a imagem (img {width: 100%}) para que ela "quebre" a largura junto com a janela.
-    </p>
-    <p>
-        A responsividade de um vídeo é meio complicado pois já vem um código pronto, porém conseguimos fazer a responsividade dele. Primeiro, envelopar o código (iframe) copiado em uma tag &lt;div&gt;, no &lt;style&gt; da tag &lt;video&gt; adicionar os parâmetros (positon: relative; / padding-bottom: %;) e no &lt;style&gt; da tag &lt;iframe&gt; adicionar um parâmetro (positon: absolute; / top: %; / left: %; / width: %; / heigth: %;), fazer testes com as porcentagens.
-    </p>
-    <p>
-        <a href="https://brunohas.github.io/projeto-android/" rel="external" target="_blank">Clique aqui</a> para ir na página do meu primeiro desafio feito com responsividade. Abrir os arquivos para entender melhor como foi feito.
-    </p>
-    <br>
-    <h4>Quando for criar um site, para ter uma ideia melhor de layout, acessar o site <a href="https://mockflow.com/">MockFlow</a>.</h4>
-    <hr>
-    <h2>&diams; Git e GitHub</h2>
-    <h3>Git</h3>
-    <p>
-        Git é um sistema de controle de versões distribuído de código aberto (repositório local).
-    </p>
-    <h3>GitHub</h3>
-    <p>
-        GitHub é uma plataforma online que permite o armazenamento e compartilhamento de projetos de desenvolvimento de software (repositório remoto). Dentro dessa plataforma também conseguimos clonar um repositório de outra pessoa, basta clicar no repositório escolhido e clicar em <em>Clone or download</em>, podemos abrir no GitHub Desktop (aplicativo) ou baixar o arquivo.zip.
-    </p>
+        </p>
+        <h3>Fontes Externas</h3>
+        <p>
+            Existem também outros sites que conseguimos pegar outras fontes, <a href="https://www.dafont.com/pt/" rel="external" target="_blank">Dafont</a> é um deles. Sempre na hora de escolher uma fonte, se atentar a ver se tem todas as letras, letras acentuadas, números e outros caracteres. Depois de baixar o arquivo.zip, extrair na mesma pasta do código-fonte e colocar @font-face dentro da tag &lt;style&gt; no estilo interno / local, irá abrir 2 parâmetros: font-family &rarr; nome para a fonte (colocar entre '')/ src: url(); &rarr; colocar o nome igual a do arquivo extraído, depois acrescentar outro parâmetro format() &rarr; opentype (otf) / truetype (ttf) / embedded-opentype / truetype-aat (Apple Advanced Typography) / svg, colocar de acordo com o arquivo extraído. <br>Ex:
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Fontes Externas&lt;/title&gt;
+            <mark>&lt;style&gt;</mark>
+                <mark>@font-face {font-family: 'OldLondon';</mark>
+                <mark>src: url('fonts/OldLondon.ttf') format('truetype'), url('fonts/OldLondonAlternate.ttf') <br>format('truetype'), url('fonts/Olondon_.otf') format('opentype'), url('fonts/Olondona.otf') format('opentype');}</mark>
+            <mark>&lt;/style&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p <mark>style="font-family: 'OldLondon'; font-size: 2.5em;"</mark>&gt;
+                Segue o exemplo de importação de uma fonte externa.
+            &lt;/p&gt;
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p style="font-family: OldLondon; font-size: 2.5em;">
+            Segue o exemplo de uma importação de uma fonte externa.
+        </p>
+        <h3>Tamanho da Fonte</h3>
+        <p>
+            Para mudar o tamanho da fonte, utilizamos o parâmetro <em>font-size</em> dentro da tag &lt;style&gt;, existem 2 tipos de medidas:
+        </p>
+        <ul>
+            <li>Medidas Absolutas &rarr; cm (centímetro), mm (milímetro), in (polegada), px (pixel), pt (ponto), pc (paica).</li>
+            <li>Medidas Relativas &rarr; em (relativo a altura normal da fonte (M)), ex (relativo a altura x de um fonte (x)), rem (relativo ao hoot que esta configurada no body), vw (viewport &rarr; porcentagem da tela), vh (altura da viewport), % (porcentagem).</li>
+        </ul>
+        <p>
+            O mais recomendo é utilizar o <em>px</em> (pixel) ou <em>em</em> (relativo a altura normal), a medida <em>em</em> depende da fonte, por exemplo:
+        </p>
+        <ul>
+            <li>Em um elemento com a fonte de <strong>16px</strong>, <strong>1em</strong> será <strong>16px</strong>, <strong>2em</strong> será <strong>32px</strong>, <strong>0.5em</strong> será <strong>8px</strong>, etc...</li>
+            <li>Em um elemento com a fonte de <strong>2in</strong>, <strong>1em</strong> será <strong>2in</strong>, <strong>2em</strong> será <strong>4in</strong>, <strong>0.5em</strong> será <strong>1in</strong>, etc...</li>
+        </ul>
+        <h3>Detectando uma fonte de um site</h3>
+        <p>
+            Para conseguir localizar uma fonte de um site, utilizar o Fonts Ninja (extensão do Google Chrome), basta entrar no site em que você deseja saber qual a fonte, e clicar no ícone do Fonts Ninja. Enquanto a extensão estiver aberta, basta passar o mouse encima do texto para saber qual sua fonte, tamanho, cor, etc...
+        </p>
+        <h3>Detectando uma fonte de uma imagem</h3>
+        <p>
+            Para conseguir localizar uma fonte de uma imagem, utilizamos os sites <a href="https://www.whatfontis.com/" rel="external" target="_blank">WhatFontIs</a> ou <a href="https://www.fontsquirrel.com/matcherator" rel="external" target="_blank">FontSquirrel</a> ou <a href="https://www.myfonts.com/pages/whatthefont" rel="external" target="_blank">MyFonts</a>. Basicamente todos funcionam arrastando a imagem até a área do site, e depois fazer algumas edições para a imagem ficar melhor de se visualizar.
+        </p>
+        <h3>Alinhamento de textos</h3>
+        <p>
+            Existem 3 tipos de alinhamentos, utilizamos o parâmetro text-aling para colocar o texto na esquerda (text-aling: left;), na direita (text-aling: right;) ou no centro (text-aling: center;). Também conseguimos utilizar o text-aling: justify; para fazer o alinhamento do texto nos 2 lados. E para fazer aquele espaço no começo do parágrafo, utilizar o parâmetro text-indent: (número de pixel) Ex &rarr; text-indent: 20px. Não esquecer que todos esses parâmetros de CSS tem que estar dentro da tag &lt;style&gt;.
+        </p>
+        <h3>Usando id com CSS</h3>
+        <p>
+            O id serve para identificar um parâmetro, por exemplo, em um código existem mais de 1 &lt;h1&gt;, o primeiro &lt;h1&gt; é o título do site, e os outros são os títulos do texto, para identificar que o primeiro &lt;h1&gt; não vai ter as mesmas características, abrimos um parâmetro (id="principal") dentro da tag &lt;h1&gt;. E depois abrimos um parâmetro (h1#principal) dentro da tag &lt;style&gt; para conseguir mudar as características desejadas. <a href="id.html" rel="next" target="_self">Clique aqui</a> para ir na página de exemplo (olhar os arquivos id.html e id.css para entender melhor). (OBS: em HTML é id = em CSS é # / em HTML é class = em CSS é .).
+        </p>
+        <h3>Usando class com CSS</h3>
+        <p>
+            O id só podemos utilizar 1 vez por página, já o class, conseguimos utilizar para mais de um parâmetro. Em HTML colocar o class dentro do parâmetro desejado, e dar um nome a ele, e em CSS colocar um ponto (.) e o nome dado para conseguir colocar os estilos desejados. <a href="id.html" rel="next" target="_self">Clique aqui</a> para ir na página de exemplo (olhar os arquivos id.html e id.css para entender melhor). Também conseguimos colocar mais de um class em um mesmo parâmetro, ex: "nostrum nisi" no parágrafo do HTML básico (tag &lt;span&gt; serve para estilizar e manipular partes específicas do texto).
+        </p>
+        <h3>Pseudo-classes com CSS</h3>
+        <p>
+            Enquanto o id utiliza (#), o class utiliza (.), as pseudo-classes utilizam (:) no CSS. As pseudo-classes são usadas para definir um estado especial de um elemento. Utilizar no elemento em que você deseja, alguns tipos de pseudo-class:
+        </p>
+        <ul>
+            <li>:hover &rarr; passa o mouse por cima</li>
+            <li>:visited &rarr; link visitado</li>
+            <li>:active &rarr; link ativado (quando clica)</li>
+        </ul>
+        <h3>Pseudo-elemento com CSS</h3>
+        <p>
+            O pseudo-elemento pode agir nas classes, nos elementos, nas ids, mexem no conteúdo periférico do elemento. Para pseudo-elemento utilizar (::), conseguimos colocar conteúdo sem o HTML, normalmente utiliza (::before / ::after) para saber se é para colocar o conteúdo antes ou depois.
+        </p>
+        <p style="font-family: monospace;">
+            Símbolos que podemos usar na CSS que vimos:<br># = id<br>. = class<br>:  = pseudo-class<br>:: = pseudo-element<br>> = children (filho)
+        </p>
+        <hr>
+        <h2>&diams; Modelos de Caixas</h2>
+        <hr>
+        <p>
+            É aplicavel ao HTML e CSS, é um conjunto para facilitar a organização do site. Básicamente cada caixa é o conteúdo que está em uma tag, por exemplo, &lt;h1&gt;Olá, Mundo!&lt;/h1&gt; &rarr; Olá, Mundo! (é a caixa). A caixa tem um tamanho e é especificado em 2 medidas muito importantes: height (altura), width (largura). Também existem outras medidas: border (borda), padding(acolchoamento / preenchimento), outline(contorno / traçado), margin(margem). Segue a anatomia de uma caixa:
+        </p>
+        <p id="imagem">
+            <img src="imagens/modelo-de-caixa.png" alt="Modelo de Caixa"> <br>Para entender melhor, na página do navegador pressionar Ctrl + Shift + i ou clicar com o mouse direito na página e clicar em "Inspecionar" para abrir o DevTools. (Se editar no Devtools, não edita no código original.)
+        </p>
+        <h3>Tipos de Caixa</h3>
+        <p>
+            box-level &rarr; é uma caixa que quebra de linha, ocupa o tamanho inteiro (widht), e quebra a linha para dar a continuidade do conteúdo. Exemplo de tags: &lt;div&gt; / &lt;h1&gt;~&lt;h6&gt; / &lt;p&gt; / &lt;main&gt; / &lt;header&gt; / &lt;nav&gt; / &lt;video&gt;.
+        </p>
+        <p>
+            inline-level &rarr; é uma caixa que não quebra a linha, não ocupa o tamanho inteiro, e da a continuidade do conteúdo na mesma linha. Exemplo de tags: &lt;span&gt; / &lt;a&gt; / &lt;code&gt; / &lt;strong&gt; / &lt;em&gt; / &lt;sub&gt; / &lt;sup&gt;.
+        </p>
+        <p>
+            Também conseguimos mudar um box-level para inline-level e vice-versa, basta acrescentar um parâmetro display: (display: block &rarr; box-level / display: inline &rarr; inline-level).
+        </p>
+        <hr>
+        <h2>&diams; Responsividade para sites</h2>
+        <hr>
+        <p>
+            A responsividade de um site é a capacidade de se adaptar a diferentes tamanhos de tela. O objetivo é proporcionar uma boa experiência de visualização ao usuário, independentemente do dispositivo que esteja sendo utilizado. Para saber melhor a medida ou visualizar em tela de celular, utilizar a extensão do Google Chrome Window Resizer.
+        </p>
+        <p>
+            Para criar essa responsividade, utilizamos os parâmetros min-width: 0px; (largura mínima da tela) e max-width: 0px; (largura máxima da tela). Normalmente a largura mínima será de 320px (pois é a largura de alguns celulares mais antigos). Caso tenha uma imagem, adicionar o parâmetro somente para a imagem (img {width: 100%}) para que ela "quebre" a largura junto com a janela.
+        </p>
+        <p>
+            A responsividade de um vídeo é meio complicado pois já vem um código pronto, porém conseguimos fazer a responsividade dele. Primeiro, envelopar o código (iframe) copiado em uma tag &lt;div&gt;, no &lt;style&gt; da tag &lt;video&gt; adicionar os parâmetros (positon: relative; / padding-bottom: %;) e no &lt;style&gt; da tag &lt;iframe&gt; adicionar um parâmetro (positon: absolute; / top: %; / left: %; / width: %; / heigth: %;), fazer testes com as porcentagens.
+        </p>
+        <p>
+            <a href="https://brunohas.github.io/projeto-android/" rel="external" target="_blank">Clique aqui</a> para ir na página do meu primeiro desafio feito com responsividade. Abrir os arquivos para entender melhor como foi feito.
+        </p>
+        <br>
+        <h4>Quando for criar um site, para ter uma ideia melhor de layout, acessar o site <a href="https://mockflow.com/">MockFlow</a>.</h4>
+        <hr>
+        <h2>&diams; Git e GitHub</h2>
+        <h3>Git</h3>
+        <p>
+            Git é um sistema de controle de versões distribuído de código aberto (repositório local).
+        </p>
+        <h3>GitHub</h3>
+        <p>
+            GitHub é uma plataforma online que permite o armazenamento e compartilhamento de projetos de desenvolvimento de software (repositório remoto). Dentro dessa plataforma também conseguimos clonar um repositório de outra pessoa, basta clicar no repositório escolhido e clicar em <em>Clone or download</em>, podemos abrir no GitHub Desktop (aplicativo) ou baixar o arquivo.zip.
+        </p>
+    </main>
 </body>
 </html>
