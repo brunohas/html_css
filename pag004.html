@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Imagens dinâmica</h1>
+    <p>
+        Para que a imagem abra sem se importar com o tamanho da tela do usuário utiliza-se as tags &lt;picture&gt; para conseguir mudar de imagem (colocar uma menor ou maior), &lt;img&gt; para colocar a "imagem principal" e a tag &lt;source:media:type&gt; para colocar as imagens restantes (abrir uma tag para cada imagem), a ordem é como se fosse uma pirâmide invertida, colocar a tag &lt;img&gt; em último e acima dela colocar as tag &lt;source:media:type&gt; de acordo com a quantidade de fotos e de tamanho (maior em último (tag img) / média no meio (tag source) / pequena acima do outro source (tag source)).
+    </p>
+    <p>
+        Na hora que abrir a tag &lt;source:media.type&gt; mudar a opção (min-width: ) para (max-width: ) e sempre colocar 50px amais do que a foto que você quer colocar, exemplo: a foto G tem tamanho de 1000px &rarr; no source da foto M coloco o max-width: 1050px para que se a tela não suportar a imagem principal = foto G abrir a foto M.
+    </p>
+    <h3>Agora aumente e diminua a janela do navegador para ver as imagens mudando para se adaptar ao tamanho da tela</h3>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">   <!--Se a tela for menor que 750px(colocar imagem P)-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">  <!--Se a tela for menor que 1050px(colocar imagem M)-->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">                               <!-- Por padrão irá abrir essa imagem -->
+    </picture>
+    <p style="text-align: center;">
+        <a href="index.html" rel="prev">Clique aqui</a> para voltar a página inicial.
+    </p>
+</body>
+</html>

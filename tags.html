@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <title>Tags HTML / CSS</title>
+    <style>
+        body {background-attachment: fixed;
+              background-image: linear-gradient(to top, #E1C38F, #91764E);
+              font-family: 'Courier New', Courier, monospace;}
+                                                                                
+        h1 {text-align: center;
+            color: black;                                                     
+            text-shadow: 1px 1px 3px rgb(238, 238, 238);
+            text-decoration: underline;}
+
+        main {background-color: white;
+              border-radius: 10px;                                        
+              box-shadow: 5px 5px 15px black;       
+              width: 1300px;                                               
+              padding: 10px;                                               
+              margin: auto;}
+
+        #imagem {text-align: center;}
+    </style>                                              
+</head>
+<body>
+    <h1>Tags HTML</h1>
+    <main>
+        <p>
+            Todas as tags HTML devem estar em &lt; &gt;, e fechar com &lt;/ &gt; (existem algums que não precisa).
+        </p>
+        <ul type="square">
+            <li>Tags não fechadas
+                <ul type="disc">
+                    <li>&lt;br&gt; &rarr; quebra de linha</li>
+                    <li>&lt;hr&gt; &rarr; linha horizontal</li>
+                </ul>
+            </li>
+        </ul>
+        <ul type="square">
+            <li>Tags de texto
+                <ul type="disc">
+                    <li>&lt;p&gt; &rarr; abrir um parágrafo</li>
+                    <li>&lt;h1&gt;, &lt;h2&gt;, ..., &lt;h6&gt;. &rarr; tags de títulos</li>
+                    <li>&lt;wbr&gt; &rarr; quebra de palavra</li>
+                    <li>&lt;strong&gt; &rarr; negrito</li>
+                    <li>&lt;em&gt; &rarr; itálico</li>
+                    <li>&lt;abbr&gt; &rarr; abreviação</li>
+                    <li>&lt;del&gt; &rarr; texto riscado</li>
+                    <li>&lt;ins&gt; &rarr; texto sublinhado</li>
+                    <li>&lt;sup&gt; &rarr; texto sobrescrito (x<sup>20</sup>+3)</li>
+                    <li>&lt;sub&gt; &rarr; texto subscrito (H<sub>2</sub>O)</li>
+                    <li>&lt;adress&gt; &rarr; informar um endereço</li>
+                    <li>&lt;bdo&gt; &rarr; inverte o texto</li>
+                    <li>&lt;bdi&gt; &rarr; isola o conteúdo do conteúdo ao redor</li>
+                    <li>&lt;mark&gt; &rarr; marca o texto</li>
+                    <li>&lt;blockquote&gt; &rarr; destaca citações</li>
+                    <li>&lt;cite&gt; &rarr; destaca citação indicando a fonte</li>
+                    <li>&lt;q&gt; &rarr; destaca citação curta</li>
+                    <li>&lt;article&gt; &rarr; "artigo" define um conteúdo independente e autocontido (usado em citações)</li>
+                    <li>&lt;aside&gt; &rarr; indicar informações importantes sobre o conteúdo principal</li>
+                    <li>&lt;header&gt; &rarr; cabeçalho (colocamos p/ os mecânismos de busca valorizar mais o conteúdo)</li>
+                    <li>&lt;main&gt; &rarr; conteúdo principal (colocamos p/ os mecânismos de busca valorizar mais o conteúdo)</li>
+                    <li>&lt;footer&gt; &rarr; rodapé (colocamos p/ os mecânismos de busca valorizar mais o conteúdo)</li>
+                    <li>&lt;nav&gt; &rarr; "menu de navegação" representa uma seção de navegação em uma página web</li>
+                    <li>&lt;div&gt; &rarr; define divisões lógicas em uma página web</li>
+                    <li>&lt;section&gt; &rarr; "sessão" utilizada para agrupar conteúdo relacionado em uma seção lógica de uma página</li>
+                    <li>&lt;pre&gt; &rarr; definir que é um texto pré-formatado</li>
+                    <li>&lt;code&gt; &rarr; indica que o texto é um código (deixa todas letras/caracteres do mesmo tamanho)</li>
+                    <li>&lt;dfn&gt; &rarr; marca um termo que será definido no documento</li>
+                    <li>&lt;kdb&gt; &rarr; elemento de entrada do teclado, entrada de voz ou qualquer dispositivo de entrada de texto</li>
+                    <li>&lt;samp&gt; &rarr; identificar o texto que deve ser interpretado como saída de amostra de um programa</li>
+                    <li>&lt;var&gt; &rarr; identificar uma variável em uma equação matemática ou programa de computador</li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+        <ul type="square">
+            <li>Tags p/ link
+                <ul type="disc">
+                    <li>&lt;a&gt; &rarr; cria hiperligação em páginas web, arquivos, endereço de e-mail, entre outros</li>
+                    <li>&lt;base&gt; &rarr; especificar a URL base ou o local de destino p/ todas as URLs relativas dentro do documento</li>
+                </ul>
+            </li>
+        </ul>
+        <ul type="square">
+            <li>Tags de imagem e objeto
+                <ul type="disc">
+                    <li>&lt;img&gt; &rarr; inserir imagens em uma página</li>
+                    <li>&lt;map&gt; &rarr; define uma área clicável no mapa de imagem (é usado com o elemento &lt;area&gt;)</li>
+                    <li>&lt;area&gt; &rarr; define uma área clicável dentro da imagem, e opcionalmente, associa-lo com um link (usado dentro de um &lt;map&gt;)</li>
+                    <li>&lt;object&gt; &rarr; define um contêiner para um recurso externo, como uma imagem, página web, reprodutor de mídia ou app plug-in</li>
+                </ul>
+            </li>
+        </ul>
+        <ul type="square">
+            <li>Tags de listas
+                <ul type="disc">
+                    <li>&lt;ul&gt; &rarr; abre uma lista sem ordem</li>
+                    <li>&lt;ol&gt; &rarr; abre uma lista ordenada</li>
+                    <li>&lt;li&gt; &rarr; utilizada dentro das tags &lt;ul&gt; ou &lt;ol&gt; para representar um item da lista</li>
+                    <li>&lt;dl&gt; &rarr; representa uma lista de associação, lista de descrição</li>
+                    <li>&lt;dt&gt; &rarr; define um termo ou nome em uma lista de descrições</li>
+                    <li>&lt;dd&gt; &rarr; define a descrição de um termo em uma lista de descrição</li>
+                </ul>
+                <p>
+                    Agora alguns códigos em CSS para estilizar a lista:
+                </p>
+                <ul type="disc">
+                    <li>list-style-type: &rarr; conseguimos mudar a bolinha da lista por um emoji, utilizar '\' para adicionar emoji, '\00A0' da um espaço <br>(ex: list-style-type: '\2714';)</li>
+                    <li>list-style-position: &rarr; posição das bolinhas da lista (inside &rarr; dentro / outside &rarr; fora)</li>
+                    <li>columns: &rarr; divide a lista em colunas (colocar a qnt de colunas que deseja)</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <h1>Tags CSS</h1>
+    <main>
+        <p>
+            Todas as tags de estilo devem estar em dentro da tag &lt;style&gt; (ou dentro de um arquivo criado em CSS) ou em uma tag específica que deseja estilizar.
+        </p>
+        <ul>
+            <li>color: &rarr; cor da letra</li>
+            <li>background-color: &rarr; cor de fundo</li>
+            <li>background-image: linear-gradient() &rarr; cria um degradê em linha (to top / to right / to bottom / to left)</li>
+            <li>background-image: radial-gradient() &rarr; cria um degradê em circulo (to top / to right / to bottom / to left)</li>
+            <li>background-attachment: fixed; &rarr; fixa o fundo em relação à janela de visualização</li>
+            <li>background-attachment: scroll; &rarr; fundo rola junto com o elemento</li>
+            <li>font-family: &rarr; tipo de fonte</li>
+            <li>font-size: &rarr; tamanho da fonte (colocar em <em>px</em> ou <em>em</em>)</li>
+            <li>font-weight: &rarr; "peso" da fonte (lighter / normal / bold / bolder)</li>
+            <li>font-style: &rarr; normal ou italic (itálico)</li>
+            <li>text-aling: &rarr; alinhamento do texto (left / center / right / justify)</li>
+            <li>text-decoration: &rarr; decoração do texto (sublinhado = underline / sobrelinhado = overline / riscado = line-through)</li>
+            <li>text-shadow: &rarr; sombra na letra (0px 0px 0px cor)</li>
+            <li>text-indent: &rarr; espaço do começo do parágrafo (colocar em uns 20<em>px</em> 30<em>px</em>)</li>
+            <li>width: &rarr; "cria" uma janela (colocar largura em <em>px</em>)</li>
+            <li>border-radius: &rarr; arredonda as pontas do width (colocar em <em>px</em> ou <em>%</em>)</li>
+            <li>box-shadow: &rarr; sombra do width (0px 0px 0px cor) / (inset 0px 0px 0px cor) sombra para dentro</li>
+            <li>padding: &rarr; "acolchoamento" (borda pro width)</li>
+            <li>margin: auto; &rarr; coloca width no meio da tela</li>
+            <li>display: &rarr; mudar os modelos de caixas (block = box-level (quebra de linha) / inline = inline-level (não quebra de linha))</li>
+            <li>border-image-source: url() &rarr; borda decorada (colocar url da imagem que deseja)</li>
+            <li>border-image-slice: &rarr; "fatiar" a imagem (colocar 20)</li>
+            <li>border-image-repeat: &rarr; repeat &rarr; repete a imagem / stretch &rarr; puxa/distorce a imagem</li>
+            <li>line-height: &rarr; espaço entre as linhas de um parágrafo</li>
+            <li>min-height: &rarr; altura mínima</li>
+            <li>max-heigth: &rarr; altura máxima</li>
+            <li>transition-duration: &rarr; serve para dar uma transição (normalmente entre 0.5s e 1s)</li>
+            <li>position: &rarr; posicionar pequenos detalhes do layout:</li>
+            <ul>
+                <li>static &rarr; seguir o fluxo comum da página</li>
+                <li>relative &rarr; passa a aceitar as propriedades top, rigth, bottom, left (ex: {position: relative; top: 20px; right: 20px})</li>
+                <li>absolute &rarr; posicionar qualquer elemento de acordo com o elemento pai que tenha um position diferente de static</li>
+                <li>fixed &rarr; parecido com o absolute, ele passa a referenciar a janela do navegador</li>
+            </ul>
+            <li>list-style-type: &rarr; conseguimos mudar a bolinha da lista por um emoji, utilizar '\' para adicionar emoji, '\00A0' da um espaço <br> (ex: list-style-type: '\2714';)</li>
+            <li>list-style-position: &rarr; posição das bolinhas da lista (inside &rarr; dentro / outside &rarr; fora)</li>
+            <li>columns: &rarr; divide em colunas (colocar a qnt)</li>
+            <hr>
+            <p>Existem algumas ShortsHands que são um conjunto de algumas tags:</p>
+            <li>font: &rarr; (font-style: font-weight: font-size: font-family)</li>
+            <li>border: &rarr; (border-width: border-style: border-color:)</li>
+            <li>padding: &rarr; (padding-top: padding-right: padding-bottom: padding-left:)</li>
+            <li>margin: &rarr; (margin-top: margin-right: margin-bottom: margin-left:)</li>
+            <li>outline: &rarr; (outline-width: outline-style: outline-color:)</li>
+            <li>border-image: &rarr; (border-image-source: url() border-image-slice: border-image-repeat:) criar uma tag border: para ter uma borda</li>
+        </ul>
+    </main>
+    <p id='imagem'>
+        <a href="index.html" rel="prev" target="_self"><img src="imagens/voltar.png" alt="Voltar"></a>
+    </p>
+</body>
+</html>

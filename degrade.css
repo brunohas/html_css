@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+* {font-family: monospace;                                          /* o * é global */
+   background-attachment: fixed;}                                   /* para o fundo não se mexer */
+
+body {background-image: linear-gradient(to top, #F1D8C9, #F2C3A7);}     /* cria o degradê */
+
+main {background-color: white;                                    /* Tag main serve para mostrar que oque estiver dentro é o conteúdo principal */
+      border-radius: 10px;                                          /* arredonda as pontas do width */
+      box-shadow: 5px 5px 15px rgba(250, 208, 184, 0.616);        /* sombra do width */
+      width: 600px;                                                 /* "cria uma janela" e muda a largura */
+      padding: 10px;                                                /* "acolchoamento" (borda pro width) */
+      margin: auto;}                                                /* coloca o width no meio da tela */
+
+h1 {color: #F39209;                                               /* cor da letra */
+    text-align: center;                                             /* texto no meio da tela */
+    text-shadow: 1px 1px 2px rgba(129, 77, 5, 0.726);}            /* sombra da letra */
+   
+h2 {color: #125189;                                               /* cor da letra */
+    text-shadow: 1px 1px 1px rgba(10, 48, 82, 0.648);}            /* sombra da letra */
+
+p {text-align: justify;}                                            /* para ficar arrumado o parágrafo */ 
