@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de fundo</title>
+    <style>
+        body {
+            background-image: url('imagens/wallpaper001.jpg');
+        }
+
+        main {
+            min-width: 280px;
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid black;
+        }
+
+        div.bloco {
+            height: 150px;
+            background-image: url('imagens/wallpaper003.jpg');
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        div#q1 {
+            background-position: left top;
+        }
+
+        div#q2 {
+            background-position: right bottom;
+        }
+
+        div#q3 {
+            background-position: center center;
+        }
+
+        div#q4 {
+            background-position: right top;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="bloco" id="q1">
+
+        </div>
+        <div class="bloco" id="q2">
+
+        </div>
+        <div class="bloco" id="q3">
+
+        </div>
+        <div class="bloco" id="q4">
+
+        </div>
+    </main>
+    <p>
+        <a href="index.html" rel="prev"><img src="imagens/voltar.png" alt="Voltar"></a>
+    </p>
+</body>
+</html>
