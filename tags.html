@@ -135,10 +135,12 @@
             <li>font-size: &rarr; tamanho da fonte (colocar em <em>px</em> ou <em>em</em>)</li>
             <li>font-weight: &rarr; "peso" da fonte (lighter / normal / bold / bolder)</li>
             <li>font-style: &rarr; normal ou italic (itálico)</li>
+            <li>font-variant: &rarr; serve para especificar se um texto deve ser exibido em fonte de versalete (small-caps renderiza o texto em letras maiúsculas que são menores do que letras maiúsculas comuns).</li>
             <li>text-aling: &rarr; alinhamento do texto (left / center / right / justify)</li>
             <li>text-decoration: &rarr; decoração do texto (sublinhado = underline / sobrelinhado = overline / riscado = line-through)</li>
             <li>text-shadow: &rarr; sombra na letra (0px 0px 0px cor)</li>
             <li>text-indent: &rarr; espaço do começo do parágrafo (colocar em uns 20<em>px</em> 30<em>px</em>)</li>
+            <li>text-transform: &rarr; permite controlar a caixa de texto (uppercase = maiúsculas / lowercase = minúsculas / capitalize = primeira letra maiúscula)</li>
             <li>width: &rarr; "cria" uma janela (colocar largura em <em>px</em>)</li>
             <li>border-radius: &rarr; arredonda as pontas do width (colocar em <em>px</em> ou <em>%</em>)</li>
             <li>box-shadow: &rarr; sombra do width (0px 0px 0px cor) / (inset 0px 0px 0px cor) sombra para dentro</li>
@@ -172,6 +174,28 @@
             <li>outline: &rarr; (outline-width: &rarr; outline-style: &rarr; outline-color:)</li>
             <li>border-image: &rarr; (border-image-source: url() &rarr; border-image-slice: &rarr; border-image-repeat:) criar uma tag border: para ter uma borda</li>
             <li>background: &rarr; (color: &rarr; image: &rarr; position: &rarr; repeat: &rarr; [size]: &rarr; attachment: )</li>
+        </ul>
+    </main>
+    <h1>Tipos de medidas</h1>
+    <main>
+        <p>
+            Agora segue alguns tipos de medidas utilizadas em HTML-CSS.
+        </p>
+        <ul>
+            <li>Píxels (px) &rarr; Píxel nada mais é do que os pequenos pontinhos luminosos da tela do seu monitor, celular, televisão, etc... O píxel do CSS NÃO é realmente um píxel da tela do dispositivo.</li>
+            <li>Points (pt) &rarr; Essa medida é geralmente utilizada em propriedades relacionadas a fonte do seu projeto. Geralmente espera-se que essa medida seja utilizada em folhas de estilo para impressões, quando se precisa ter certeza do tamanho da fonte utilizada. Não é recomendada para a estilização em tela!</li>
+            <li>in (inches/polegadas) &rarr; Elas não costumam ser utilizadas em projetos, uma vez que não existem um uso prático para elas (podemos atingir os mesmos resultados utilizando outras unidades).</li>
+            <li>Centímetro e Milímetro (cm / mm) &rarr; Apesar de bastante comuns, tanto centímetro e milímetro são pouco usadas no CSS. Assim como o pt, o uso dessas duas é esperado para folhas de estilo para impressões.</li>
+            <li>Paica (pc) &rarr; a Paica também vem para o CSS sendo herdada da tipografia. Por não ser uma unidade amplamente conhecida, ela acaba sendo fadada ao esquecimento.</li>
+            <li>Ems (em) &rarr; Essa unidade muda para os elementos filhos de acordo com o tamanho da fonte (font-size) do elemento pai (de acordo com o tamanho da fonte utilizada em determinado elemento, os elementos filhos serão redimensionados de forma a obedecer a referência a esse tamanho de fonte!). </li>
+            <li>Rems (rem, "root em") &rarr; O REM vem como sucessor do EM e ambos compartilham a mesma lógica de funcionamento (font-size), porém a forma de implementação é diferente. Enquanto o em está diretamente relacionado ao tamanho da fonte do elemento pai, o rem está relacionado com o tamanho da fonte do elemento root (raiz), no caso, a tag.</li>
+            <li>Porcentagem (%) &rarr; A porcentagem permite que criemos módulos que sempre vão se readaptar para ocupar a quantidade especificada. Por exemplo, se definirmos um elemento tendo um tamanho de 50%, independente do dispositivo em questão, esse módulo sempre ocupará metade do espaço que lhe cabe (caso esteja dentro de algum outro elemento).</li>
+            <li>Ex &rarr; Diferentemente da forma como a EM e a REM funcionavam, essa unidade não se relaciona com o tamanho da fonte (font-size), mas com qual fonte está sendo utilizada naquele momento (font-family), mais especificamente ao tamanho do caractere x dessa fonte em questão (x-height). Esse valor pode vir diretamente com a fonte, o browser pode medir o caractere em caixa baixa (lower case) e se esses dois não funcionarem, o browser estipula um valor de 0.5em para 1ex. </li>
+            <li>Ch &rarr; o ch (character unit) é definida na documentação como sendo a "medida avançada" da largura do caractere zero ("0") - monospace.</li>
+            <li>Vw (viewport width) &rarr; Viewport nada mais é que a área visível de uma página web para o seu usuário, essa viewport pode variar de acordo com o dispositivo, sendo menor em celulares e maior em desktops. essa unidade se relaciona diretamente com a largura da viewport, onde 1vw representa 1% do tamanho da largura dessa área visível. A diferença entre vw e a % é bem semelhante a diferença entre em e rem, onde a % é relativa ao contexto local do elemento e o vw é relativo ao tamanho total da largura da viewport do usuário.</li>
+            <li>Vh (viewport height) &rarr; Essa unidade funciona da mesma forma que o vw, porém dessa vez, a referência será a altura e não a largura.</li>
+            <li>Vmin (viewport minimun) &rarr; Essa unidade também se relaciona com as dimensões da viewport, mas com um porém. Anteriormente quando vimos vh e vw precisávamos escolher se gostaríamos de nos basear na altura (vh) ou na largura (vw) da viewport. Diferentemente das anteriores, o vmin utilizará como base a menor dimensão da viewport (altura x largura). </li>
+            <li>Vmax (viewport maximum) &rarr; Seguindo a mesma base lógica da unidade anterior, o vmax terá como valor de referência a maior dimensão da viewport. Ou seja, utilizando o mesmo exemplo, se tivermos 1600px de altura e 900px de largura, 1vmax será equivalente a 16px!</li>
         </ul>
     </main>
     <p id='imagem'>
