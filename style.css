@@ -48,8 +48,7 @@ h3 {
 h4 {
     text-align: left;
     font: italic normal 1.3em 'fantasy';
-    background-color: white;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.26);
     padding: 15px;
     border-radius: 10px;
 }
@@ -62,4 +61,27 @@ p {
 
 p#imagem {
     text-align: center;
+}
+
+table {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tbody > tr > th {
+    text-align: left;
+}
+
+thead, tfoot {
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+
+td.num {
+    text-align: right;
 }

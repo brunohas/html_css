@@ -301,6 +301,227 @@
             <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
         </dl>
         <hr>
+        <h2>&diams; Tabelas</h2>
+        <hr>
+        <p>
+            Para criar tabelas em HTML, utilizamos a tag &lt;table&gt; (tabela) para abrir a tabela, junto com as tags &lt;tr&gt; (table row = linha da tabela) e &lt;td&gt; (table data = dado da tabela). Quando criamos uma tabela e acrescentamos a tag de estilo <em>'border: 0px solid black'</em> criamos linhas em volta de cada dado, porém elas ficam com um pequeno espaço entre elas, para tirar esse espaço, utilizamos a tag <em>'border-collapse: collapse'</em>, e para ter um espaço utiliza-se <em>'border-collapse: separate'</em>.
+        </p>
+        <h3>Tabelas simples</h3>
+        <p>
+            Anatomia de tabela simples: <br>
+            <pre>
+                <code>
+                    &lt;table&gt; &rarr; tabela
+                        &lt;tr&gt; &rarr; linha da tabela
+                            &lt;th&gt; &rarr; cabeçalho da tabela
+                            &lt;td&gt; &rarr; dado da tabela
+                </code>
+            </pre>
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Tabelas&lt;/title&gt;
+            <mark>&lt;style&gt;</mark>
+                <mark>table {</mark>
+                    <mark>width: 500px;</mark>               !- para o "quadradinho" fique maior -!
+                    <mark>border-collapse: collapse;</mark>  !- juntar os "quadradinhos" -!
+                <mark>}</mark>
+                <mark>td {</mark>
+                    <mark>border: 1px solid black;</mark>    !- linhas em volta de cada dado -!
+                    <mark>padding: 10px;</mark>              !- dar um espaço entre o dado e a borda -!
+                    <mark>text-align: center;</mark>         !- alinhamento horizontal -!
+                    <mark>vertical-align: middle;</mark>     !- alinhamento vertical -!
+                <mark>}</mark>
+            <mark>&lt;/style&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            <mark>&lt;table&gt;</mark>
+                <mark>&lt;tr&gt;</mark>                            !- 1° linha -!
+                    <mark>&lt;td&gt;A1&lt;/td&gt;</mark>                 !- 1° dado da 1° linha -!
+                    <mark>&lt;td&gt;B1&lt;/td&gt;</mark>                 !- 2° dado da 1° linha -!
+                    <mark>&lt;td&gt;C1&lt;/td&gt;</mark>                 !- 3° dado da 1° linha -!
+                <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;tr&gt;</mark>                            !- 2° linha -!
+                    <mark>&lt;td&gt;A2&lt;/td&gt;</mark>                 !- 1° dado da 2° linha -!
+                    <mark>&lt;td&gt;B2&lt;/td&gt;</mark>                 !- 2° dado da 2° linha -!
+                    <mark>&lt;td&gt;C2&lt;/td&gt;</mark>                 !- 3° dado da 2° linha -!
+                <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;tr&gt;</mark>                            !- 3° linha -!
+                    <mark>&lt;td&gt;A3&lt;/td&gt;</mark>                 !- 1° dado da 3° linha -!
+                    <mark>&lt;td&gt;B3&lt;/td&gt;</mark>                 !- 2° dado da 3° linha -!
+                    <mark>&lt;td&gt;C3&lt;/td&gt;</mark>                 !- 3° dado da 3° linha -!
+                <mark>&lt;/tr&gt;</mark>
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <table>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </table>
+        <h3>Tabelas Grandes</h3>
+        <p>
+            Para fazer tabelas mais complexas, ainda utilizamos a tag &lt;table&gt;, porém com mais alguns outros parâmetros, &lt;thead&gt; para o cabeçalho da tabela, &lt;tbody&gt; para o corpo da tabela, &lt;tfoot&gt; para o rodapé da tabela. E dentro deles utilizamos os mesmo parâmetros da tabela simples: &lt;tr&gt; (linha da tabela) &lt;td&gt; (dado da tabela) &lt;th&gt; (cabeçalho da tabela).
+        </p>
+        <p>
+            Anatomia de tabela complexas: <br>
+            <pre>
+                <code>
+                    &lt;table&gt; &rarr; tabela
+                        &lt;thead&gt; &rarr; CABEÇA da tabela
+                            &lt;tr&gt; &rarr; linha da tabela
+                                &lt;th&gt; &rarr; cabeçalho da tabela
+                                &lt;td&gt; &rarr; dado da tabela
+                        &lt;tbody&gt; &rarr; CORPO da tabela
+                            &lt;tr&gt; &rarr; linha da tabela
+                                &lt;th&gt; &rarr; cabeçalho da tabela
+                                &lt;td&gt; &rarr; dado da tabela
+                        &lt;tfoot&gt; &rarr; PÉ da tabela
+                            &lt;tr&gt; &rarr; linha da tabela
+                                &lt;th&gt; &rarr; cabeçalho da tabela
+                                &lt;td&gt; &rarr; dado da tabela
+                </code>
+            </pre>
+            Agora um exemplo de uma tabela dos 10 estados mais populosos do Brasil em 2025.
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Habitantes do Brasil em 2025&lt;/title&gt;
+            <mark>&lt;style&gt;</mark>
+                <mark>table {</mark>
+                    <mark>width: 500px;</mark>               !- para o "quadradinho" fique maior -!
+                    <mark>border-collapse: collapse;</mark>  !- juntar os "quadradinhos" -!
+                <mark>}</mark>
+                <mark>td, th {</mark>
+                    <mark>border: 1px solid black;</mark>    !- linhas em volta de cada dado -!
+                    <mark>padding: 10px;</mark>              !- dar um espaço entre o dado e a borda -!
+                <mark>}</mark>
+                <mark>thead, tfoot {</mark>
+                    <mark>background-color: gray;</mark>     !- cor de fundo do cabeçalho e do rodapé -!
+                    <mark>color: white;</mark>               !- cor da letra -!
+                <mark>}</mark>
+                <mark>td.num {</mark>
+                    <mark>text-align: right;</mark>          !- alinhamento do td com class='num' -!
+                <mark>}</mark>
+            <mark>&lt;/style&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            <mark>&lt;table&gt;</mark>
+                <mark>&lt;thead&gt;</mark>
+                    <mark>&lt;tr&gt;</mark>
+                        <mark>&lt;th&gt;Estado&lt;/th&gt;</mark>
+                        <mark>&lt;th&gt;População&lt;/th&gt;</mark>
+                    <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;/thead&gt;</mark>
+                <mark>&lt;tbody&gt;</mark>
+                    <mark>&lt;tr&gt;</mark>
+                        <mark>&lt;th&gt;São Paulo&lt;/th&gt;</mark>
+                        <mark>&lt;td class="num"&gt;45.973.194&lt;/td&gt;</mark>
+                    <mark>&lt;/tr&gt;</mark>
+                    <mark>&lt;tr&gt;</mark>
+                        <mark>&lt;th&gt;Minas Gerais&lt;/th&gt;</mark>
+                        <mark>&lt;td class="num"&gt;21.322.691&lt;/td&gt;</mark>
+                    <mark>&lt;/tr&gt;</mark>
+                    <mark>&lt;tr&gt;</mark>
+                        <mark>&lt;th&gt;Rio de Janeiro&lt;/th&gt;</mark>
+                        <mark>&lt;td class="num"&gt;17.219.679&lt;/td&gt;</mark>
+                    <mark>&lt;/tr&gt;</mark>
+                    <mark>(colocar as outras cidades...)</mark>
+                <mark>&lt;/tbody&gt;</mark>
+                <mark>&lt;tfoot&gt;</mark>
+                    <mark>&lt;tr&gt;</mark>
+                        <mark>&lt;th&gt;Total de habitantes&lt;/th&gt;</mark>
+                        <mark>&lt;td class="num"&gt;157.916.089&lt;/td&gt;</mark>
+                    <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;/tfoot&gt;</mark>    
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso fica assim:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>População</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>São Paulo</th>
+                    <td class="num">45.973.194</td>
+                </tr>
+                <tr>
+                    <th>Minas Gerais</th>
+                    <td class="num">21.322.691</td>
+                </tr>
+                <tr>
+                    <th>Rio de Janeiro</th>
+                    <td class="num">17.219.679</td>
+                </tr>
+                <tr>
+                    <th>Bahia</th>
+                    <td class="num">14.850.513</td>
+                </tr>
+                <tr>
+                    <th>Paraná</th>
+                    <td class="num">11.824.665</td>
+                </tr>
+                <tr>
+                    <th>Rio Grande do Sul</th>
+                    <td class="num">11.229.915</td>
+                </tr>
+                <tr>
+                    <th>Pernambuco</th>
+                    <td class="num">9.539.029</td>
+                </tr>
+                <tr>
+                    <th>Ceará</th>
+                    <td class="num">9.233.656</td>
+                </tr>
+                <tr>
+                    <th>Pará</th>
+                    <td class="num">8.664.306</td>
+                </tr> 
+                <tr>
+                    <th>Santa Catarina</th>
+                    <td class="num">8.058.441</td>
+                </tr> 
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total de habitantes</th>
+                    <td class="num"><strong>157.916.089</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
         <h2>&diams; Trabalhando com Links</h2>
         <hr>
         <h3>Links externos</h3>
