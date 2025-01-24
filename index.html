@@ -563,6 +563,71 @@
         Também foi utilizado esses parâmetros na tabela de cima (tabela dos 10 estados mais populosos do Brasil)
             </code>
         </pre>
+        <h3>Mesclagem de células</h3>
+        <p>
+            A mesclagem de células em HTML é feita com os atributos <em>colspan</em> e <em>rowspan</em>. Esses atributos são usados dentro das tags &lt;td&gt; ou &lt;th&gt;. O atributo <em>colspan</em> é usado para mesclar células em coluna. Já o atributo <em>rowspan</em> é usado para mesclar células em linhas. 
+        </p>
+        <pre>
+            <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Mesclagem de Células&lt;/title&gt;
+            <mark>&lt;style&gt;</mark>
+                <mark>table {</mark>
+                    <mark>width: 500px;</mark>               
+                    <mark>border-collapse: collapse;</mark>  
+                <mark>}</mark>
+                <mark>td {</mark>
+                    <mark>border: 1px solid black;</mark>    
+                    <mark>padding: 10px;</mark>  
+                <mark>}</mark>
+            <mark>&lt;/style&gt;</mark>
+        &lt;/head&gt;
+        &lt;body&gt;
+            <mark>&lt;table&gt;</mark>
+                <mark>&lt;caption&gt;Tabela com mesclagem de células&lt;/caption&gt;</mark>
+                <mark>&lt;tr&gt;</mark>                            
+                    <mark>&lt;td&gt;A&lt;/td&gt;</mark>                 
+                    <mark>&lt;td colspan="2"&gt;B&lt;/td&gt;</mark>                                
+                <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;tr&gt;</mark>                            
+                    <mark>&lt;td rowspan="3"&gt;D&lt;/td&gt;</mark>                 
+                    <mark>&lt;td&gt;E&lt;/td&gt;</mark>                
+                    <mark>&lt;td rowspan="2"&gt;F&lt;/td&gt;</mark>                 
+                <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;tr&gt;</mark>               
+                    <mark>&lt;td&gt;H&lt;/td&gt;</mark>               
+                <mark>&lt;/tr&gt;</mark>
+                <mark>&lt;tr&gt;</mark>                
+                    <mark>&lt;td colspan="2"&gt;L&lt;/td&gt;</mark>                
+                <mark>&lt;/tr&gt;</mark>
+        &lt;/body&gt;
+            </code>
+        </pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <table>
+            <caption>Tabela com mesclagem de células</caption>
+            <tr>
+                <td>A</td>
+                <td colspan="2">B</td>
+            </tr>
+            <tr>
+                <td rowspan="3">D</td>
+                <td>E</td>
+                <td rowspan="2">F</td>
+            </tr>
+            <tr>
+                <td>H</td>
+            </tr>
+            <tr>
+                <td colspan="2">L</td>
+            </tr>
+        </table>
         <hr>
         <h2>&diams; Trabalhando com Links</h2>
         <hr>

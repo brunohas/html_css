@@ -103,3 +103,7 @@ thead > tr > th {
     top: 0;
     background-color: rgb(60, 60, 60);
 }
+
+caption {
+    border: 1px solid black;
+}
