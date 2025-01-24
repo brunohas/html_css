@@ -625,9 +625,91 @@
                 <td>H</td>
             </tr>
             <tr>
-                <td colspan="2">L</td>
+                <td colspan="2">K</td>
             </tr>
         </table>
+        <p>
+            Você viu que na hora de mostrar um título de uma tabela que é relacionado com a coluna, acrescentar o parâmetro <em>scope="col"</em>, e o título relacionado com a linha, utilizamos o parâmetro <em>scope="row"</em>. Isso não causa nenhum efeito visual, serve só para especificar o relacionamento entre o título e os dados. E quando tiver uma mesclagem de células também indentificamos o título, porém se tiver uma mesclagem de linha, colocar o parâmetro <em>scope="rowgroup"</em> e quando tiver uma mesclagem em coluna, colocar o parâmetro <em>scope="colgroup"</em>. <br>Exemplo: 
+        </p>
+        <table>
+            <caption>Filmes Favoritos</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th colspan="3" scope="colgroup">Filmes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3" scope="rowgroup">Mulheres</th>
+                    <td>Ana Maria Santos</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Cláudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big Hero</td>
+                </tr>
+                <tr>
+                    <th rowspan="3" scope="rowgroup">Homens</th>
+                    <td>Bruno Mendonça</td>
+                    <td>Intocáveis</td>
+                    <td>Amnésia</td>
+                    <td>Gladiador</td>
+                </tr>
+                <tr>
+                    <td>Daniel Lourenço</td>
+                    <td>Wall-E</td>
+                    <td>Oldboy</td>
+                    <td>Dangal</td>
+                </tr>
+                <tr>
+                    <td>Fabiano Mota</td>
+                    <td>Star Wars 5</td>
+                    <td>Taxi Driver</td>
+                    <td>Toy Story</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>O título <strong>"Grupos"</strong> utiliza <em>scope="col"</em>, pois o item relacionado está na mesma coluna (Mulheres/Homens).</li>
+            <li>O título <strong>"Nomes</strong> utiliza <em>scope="col"</em>, pois o item relacionado está na mesma coluna (nomes da pessoas).</li>
+            <li>O título <strong>"Filmes"</strong> utiliza <em>scope="colgroup"</em>, pois o item relacionado está mesclado, utilizando 3 colunas (nomes dos filmes).</li>
+            <li>O título <strong>"Mulheres"</strong> utiliza <em>scope="rowgroup"</em>, pois o item relacionado está mesclado, utilizando 3 linhas (nomes das mulheres + filmes de cada).</li>
+            <li>O título <strong>"Homens"</strong> utiliza <em>scope="rowgroup"</em>, pois o item relacionado está mesclado, utilizando 3 linhas (nomes dos homens + filmes de cada).</li>
+        </ul>
+        <p>
+            Dentro de uma tabela, nós sabemos que para estilizar uma linha, basta adicionar parâmetros na linha desejada. Agora para estilizar uma coluna inteira, teriamos que adionar o parâmetro de estilo um por um. Mas dentro de uma tabela, conseguimos adicionar a tag &lt;colgroup&gt; "Table Column Group Element" ou grupo de colunas de uma tabela HTML, que é o marcador onde se coloca propriedades ou formatações que serão "herdadas" pelas colunas que fazem parte daquele grupo de colunas, para cada coluna que tiver na tabela, adicionar o parâmetro &lt;col&gt;, e em seguida adicionar a pseudo-classe (class="") para a coluna que deseja estilizar (pode ser mais que uma). Por exemplo, uma tabela com 4 colunas, quero estilizar a segunda coluna:
+        </p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;colgroup&gt;
+                        &lt;col&gt;
+                        &lt;col class="destaque"&gt;
+                        &lt;col&gt;
+                        &lt;col&gt;
+                    &lt;/colgroup&gt;
+                    &lt;caption&gt;Exemplo&lt;/caption&gt;
+                    &lt;tbody&gt;
+
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>
+            Para fazer uma responsividade de uma tabela de um site, envelopamos com uma tag &lt;div&gt; todo o conteúdo que estiver dentro da tag &lt;table&gt;. Depois acrescentamos uma tag de estilo (<em>overflow:</em> / <em>overflow-y:</em> / <em>overflow-x:</em>) dentro da tag &lt;div&gt; para que a tabela "quebre" e não tenha uma barra de rolagem lateral.
+        </p>
         <hr>
         <h2>&diams; Trabalhando com Links</h2>
         <hr>
