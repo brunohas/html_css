@@ -66,11 +66,19 @@ p#imagem {
 table {
     width: 500px;
     border-collapse: collapse;
+    position: relative;
 }
 
 td, th {
     border: 1px solid black;
     padding: 10px;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px;
+    background-color: lightgray;
 }
 
 tbody > tr > th {
@@ -84,4 +92,14 @@ thead, tfoot {
 
 td.num {
     text-align: right;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+thead > tr > th {
+    position: sticky;
+    top: 0;
+    background-color: rgb(60, 60, 60);
 }

@@ -304,7 +304,10 @@
         <h2>&diams; Tabelas</h2>
         <hr>
         <p>
-            Para criar tabelas em HTML, utilizamos a tag &lt;table&gt; (tabela) para abrir a tabela, junto com as tags &lt;tr&gt; (table row = linha da tabela) e &lt;td&gt; (table data = dado da tabela). Quando criamos uma tabela e acrescentamos a tag de estilo <em>'border: 0px solid black'</em> criamos linhas em volta de cada dado, porém elas ficam com um pequeno espaço entre elas, para tirar esse espaço, utilizamos a tag <em>'border-collapse: collapse'</em>, e para ter um espaço utiliza-se <em>'border-collapse: separate'</em>.
+            Para criar tabelas em HTML, utilizamos a tag &lt;table&gt; (tabela) para abrir a tabela, &lt;caption&gt; para o título / legenda da tabela junto com as tags &lt;tr&gt; (table row = linha da tabela) e &lt;td&gt; (table data = dado da tabela). Quando criamos uma tabela e acrescentamos a tag de estilo <em>'border: 0px solid black'</em> criamos linhas em volta de cada dado, porém elas ficam com um pequeno espaço entre elas, para tirar esse espaço, utilizamos a tag <em>'border-collapse: collapse'</em>, e para ter um espaço utiliza-se <em>'border-collapse: separate'</em>.
+        </p>
+        <p>
+            Para deixar claro para os mecânismos de busca, que um título de uma tabela é relacionado com a coluna, acrescentar o parâmetro <em>scope="col"</em>, e o título relacionado com a linha, utilizar o parâmetro <em>scope="row"</em>. Isso não causa nenhum efeito visual, serve só para especificar o relacionamento entre o título e os dados.
         </p>
         <h3>Tabelas simples</h3>
         <p>
@@ -312,6 +315,7 @@
             <pre>
                 <code>
                     &lt;table&gt; &rarr; tabela
+                        &lt;caption&gt; &rarr; título / legenda da tabela
                         &lt;tr&gt; &rarr; linha da tabela
                             &lt;th&gt; &rarr; cabeçalho da tabela
                             &lt;td&gt; &rarr; dado da tabela
@@ -341,6 +345,7 @@
         &lt;/head&gt;
         &lt;body&gt;
             <mark>&lt;table&gt;</mark>
+                <mark>&lt;caption&gt;Tabela simples&lt;/caption&gt;</mark>
                 <mark>&lt;tr&gt;</mark>                            !- 1° linha -!
                     <mark>&lt;td&gt;A1&lt;/td&gt;</mark>                 !- 1° dado da 1° linha -!
                     <mark>&lt;td&gt;B1&lt;/td&gt;</mark>                 !- 2° dado da 1° linha -!
@@ -363,6 +368,7 @@
             Que no caso ficaria assim:
         </p>
         <table>
+            <caption>Tabela simples</caption>
             <tr>
                 <td>A1</td>
                 <td>B1</td>
@@ -388,6 +394,7 @@
             <pre>
                 <code>
                     &lt;table&gt; &rarr; tabela
+                        &lt;caption&gt; &rarr; título / legenda da tabela
                         &lt;thead&gt; &rarr; CABEÇA da tabela
                             &lt;tr&gt; &rarr; linha da tabela
                                 &lt;th&gt; &rarr; cabeçalho da tabela
@@ -414,28 +421,35 @@
             &lt;title&gt;Habitantes do Brasil em 2025&lt;/title&gt;
             <mark>&lt;style&gt;</mark>
                 <mark>table {</mark>
-                    <mark>width: 500px;</mark>               !- para o "quadradinho" fique maior -!
-                    <mark>border-collapse: collapse;</mark>  !- juntar os "quadradinhos" -!
+                    <mark>width: 500px;</mark>                 !- para o "quadradinho" fique maior -!
+                    <mark>border-collapse: collapse;</mark>    !- juntar os "quadradinhos" -!
                 <mark>}</mark>
                 <mark>td, th {</mark>
-                    <mark>border: 1px solid black;</mark>    !- linhas em volta de cada dado -!
-                    <mark>padding: 10px;</mark>              !- dar um espaço entre o dado e a borda -!
+                    <mark>border: 1px solid black;</mark>      !- linhas em volta de cada dado -!
+                    <mark>padding: 10px;</mark>                !- dar um espaço entre o dado e a borda -!
+                <mark>}</mark>
+                <mark>caption {</mark>
+                    <mark>font-size: 1.2em;</mark>             !- aumentar a letra do título / legenda da tabela -!
+                    <mark>font-weight: bold;</mark>            !- "peso" da letra -!
+                    <mark>padding: 5px;</mark>                 !- espaço entre o dado e a borda -!
+                    <mark>background-color: lightgray;</mark>  !- cor de fundo do título / legenda -!
                 <mark>}</mark>
                 <mark>thead, tfoot {</mark>
-                    <mark>background-color: gray;</mark>     !- cor de fundo do cabeçalho e do rodapé -!
-                    <mark>color: white;</mark>               !- cor da letra -!
+                    <mark>background-color: gray;</mark>       !- cor de fundo do cabeçalho e do rodapé -!
+                    <mark>color: white;</mark>                 !- cor da letra -!
                 <mark>}</mark>
                 <mark>td.num {</mark>
-                    <mark>text-align: right;</mark>          !- alinhamento do td com class='num' -!
+                    <mark>text-align: right;</mark>            !- alinhamento do td com class='num' -!
                 <mark>}</mark>
             <mark>&lt;/style&gt;</mark>
         &lt;/head&gt;
         &lt;body&gt;
             <mark>&lt;table&gt;</mark>
+                <mark>&lt;caption&gt;Os 10 primeiros estados mais populosos do Brasil em 2025.&lt;/caption&gt;</mark>
                 <mark>&lt;thead&gt;</mark>
                     <mark>&lt;tr&gt;</mark>
-                        <mark>&lt;th&gt;Estado&lt;/th&gt;</mark>
-                        <mark>&lt;th&gt;População&lt;/th&gt;</mark>
+                        <mark>&lt;th scope="col"&gt;Estado&lt;/th&gt;</mark>
+                        <mark>&lt;th scope="col"&gt;População&lt;/th&gt;</mark>
                     <mark>&lt;/tr&gt;</mark>
                 <mark>&lt;/thead&gt;</mark>
                 <mark>&lt;tbody&gt;</mark>
@@ -455,7 +469,7 @@
                 <mark>&lt;/tbody&gt;</mark>
                 <mark>&lt;tfoot&gt;</mark>
                     <mark>&lt;tr&gt;</mark>
-                        <mark>&lt;th&gt;Total de habitantes&lt;/th&gt;</mark>
+                        <mark>&lt;th scope="row"&gt;Total de habitantes&lt;/th&gt;</mark>
                         <mark>&lt;td class="num"&gt;157.916.089&lt;/td&gt;</mark>
                     <mark>&lt;/tr&gt;</mark>
                 <mark>&lt;/tfoot&gt;</mark>    
@@ -466,10 +480,11 @@
             Que no caso fica assim:
         </p>
         <table>
+            <caption>Os 10 primeiros estados mais populosos do Brasil em 2025.</caption>
             <thead>
                 <tr>
-                    <th>Estado</th>
-                    <th>População</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">População</th>
                 </tr>
             </thead>
             <tbody>
@@ -516,11 +531,38 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th>Total de habitantes</th>
+                    <th scope="row">Total de habitantes</th>
                     <td class="num"><strong>157.916.089</strong></td>
                 </tr>
             </tfoot>
         </table>
+        <h3>Efeito zebrado nas tabelas</h3>
+        <p>
+            Para fazer um efeito zebrado em uma tabela usamos uma tag no CSS, utilizamos uma pseudo-classe nas linhas da tabela (tr), <em>nth-child(odd)</em> ou <em>nth-child(even)</em>. Também podemos trocar o odd (ímpar) por 2n-1, e even (par) por 2n. Que no caso as tags de estilo ficariam assim:
+        </p>
+        <pre>
+            <code>
+                tbody > tr:nth-child(even) {                                  tbody > tr:nth-child(odd) {
+                    background-color: lightgray;              OU                  background-color: lightgray;
+                }                                                             }
+
+         No exemplo de cima (tabela dos 10 estados mais populosos do Brasil), utilizei o parâmetro <em>nth-child(even)</em>.
+            </code>
+        </pre>
+        <h3>Cabeçalho fixo para grandes tabelas</h3>
+        <p>
+            Conseguimos fixar o cabeçalho de uma tabela para que fique melhor de se visualizar, normalmente utilizamos em tabelas muito grande, que assim que você começa a descer, o cabeçalho da tabela some, assim tendo que subir sempre para ver qual o título de cada coluna. Para fixar o cabeçalho utilizamos os parâmetros <em>position: relative;</em> no CSS da tabela, e criamos outro parâmetro no CSS (thead > tr > th) que significa o th que está dentro do tr que está dentro do thead vai receber esses outros parâmetros. Que seriam os parâmetros <em>position: sticky;</em> (colável) + <em>top: 0;</em> (colar na parte 0 "topo") + <em>background-color: </em> (mesmo background-color do cabeçalho). Que no caso as tags CSS ficariam assim:
+        </p>
+        <pre>
+            <code>
+                table{                                          thead > tr > th {
+                    position: relative;          +                  position: sticky;
+                }                                                   top: 0;
+                                                                    background-color: msm do cabeçalho;
+                                                                }
+        Também foi utilizado esses parâmetros na tabela de cima (tabela dos 10 estados mais populosos do Brasil)
+            </code>
+        </pre>
         <hr>
         <h2>&diams; Trabalhando com Links</h2>
         <hr>
