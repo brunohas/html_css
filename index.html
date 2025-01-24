@@ -1255,6 +1255,42 @@
         <p>
             GitHub é uma plataforma online que permite o armazenamento e compartilhamento de projetos de desenvolvimento de software (repositório remoto). Dentro dessa plataforma também conseguimos clonar um repositório de outra pessoa, basta clicar no repositório escolhido e clicar em <em>Clone or download</em>, podemos abrir no GitHub Desktop (aplicativo) ou baixar o arquivo.zip.
         </p>
+        <hr>
+        <h2>&diams; Iframe</h2>
+        <hr>
+        <p>
+            Um iframe é uma etiqueta HTML que permite a incorporação de outro documento HTML dentro de uma página, ele pode ser usado em qualquer lugar da página, sem precisar incluí-lo na estrutura do layout do site. O iframe é usado para:
+            <ul>
+                <li>Exibir vídeos, mapas, anúncios e feeds de mídia social</li>
+                <li>Integrar conteúdo interativo</li>
+                <li>Carregar uma página externa dentro da página web</li>
+                <li>Visualizar conteúdos de terceiros</li>
+                <li>Adicionar um vídeo do Youtube em um post</li>
+                <li>Inserir mapas do Google Maps em sites institucionais</li>
+            </ul>
+            Para modificar o comportamento do iframe, é possível usar atributos como:
+            <ul>
+                <li>width e heigth para definir a largura e altura do elemento (tamanho padrão é width: 300 / heigth: 150)</li>
+                <li>sandbox para aplicar uma camada extra de segurança</li>
+            </ul>
+        </p>
+        <p>
+            Para utilizar o iframe usamos a tag &lt;iframe src="" frameborder="0"&gt;, o <em>src=""</em> é o direcionamento do link e o <em>frameborder=""</em> é a borda da janela (0 = sem borda / 1 = com borda). Se atentar pois tem sites que tem uma proteção contra o iframe. E também existem dispositivos que não tem o suporte para o iframe, nesse caso, colocar uma âncora &lt;a&gt; dentro da tag &lt;iframe&gt;, para que se o iframe não abrir, tenha a âncora para direcionar a pessoa para o site, colocar assim:
+            <pre>
+                <code>
+&lt;p&gt;
+    Acessando o site do <mark>&lt;iframe src="link da página" frameborder="0"&gt;</mark> <mark>&lt;a href="link da página" target="_blank"&gt;Nome da página&lt;/a&gt;</mark> <mark>&lt;/iframe&gt;</mark> para 
+    entender melhor.
+&lt;/p&gt;
+                </code>
+            </pre>
+        </p>
+        <p>
+            Ainda dentro da tag &lt;iframe&gt; conseguimos acrescentar o parâmetro scolling="auto" (se o conteúdo ultrapassar o tamanho do iframe, ele vai criar uma barra de rolagem) scolling="yes" (mesmo que o conteúdo caiba no iframe, irá aparecer a barra de rolagem), scolling="no" (mesmo que o conteúdo seja maior, ele não vai permitir a barra de rolagem).
+        </p>
+        <p>
+            Olhe um exemplo de iframe: <iframe src="https://www.cursoemvideo.com/" frameborder="0"> <a href="https://www.cursoemvideo.com/" target="_blank">Youtube</a></iframe>
+        </p>
     </main>
 </body>
 </html>
