@@ -107,3 +107,9 @@ thead > tr > th {
 caption {
     border: 1px solid black;
 }
+
+iframe#tela {
+    width: 1000px;
+    height: 500px;
+    border: 2px solid black;
+}

@@ -1291,6 +1291,39 @@
         <p>
             Olhe um exemplo de iframe: <iframe src="https://www.cursoemvideo.com/" frameborder="0"> <a href="https://www.cursoemvideo.com/" target="_blank">Youtube</a></iframe>
         </p>
+        <p>
+            Também conseguimos abrir uma página criada dentro do iframe, basta adicionar um parâmetro <em>name=" "</em> dentro da tag &lt;iframe&gt; e uma âncora para direcionar qual página irá ser exibida no iframe (colocar o parâmetro target="nome dado no parâmetro adicionado do iframe"). <br> Ex:
+            <pre>
+                <code>
+                    &lt;p&gt;
+                        Clique em uma das páginas para ser direcionado.
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="tags.html" <mark>target="frame"</mark>&gt;Página das Tags&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="id.html" <mark>target="frame"</mark>&gt;Página ID&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="degrade.html" <mark>target="frame"</mark>&gt;Página do Degradê&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/p&gt;
+                    &lt;iframe <mark>name="frame"</mark> src=""&gt;&lt;/iframe&gt;
+                </code>
+            </pre>
+        </p>
+        <p>
+            Depois de acresecentar algumas tags de estilo, ficaria assim:
+        </p>
+        <p>
+            Clique em uma das páginas para ser direcionado.
+            <ul>
+                <li><a href="tags.html" target="frame">Página das Tags</a></li>
+                <li><a href="id.html" target="frame">Página ID</a></li>
+                <li><a href="degrade.html" target="frame">Página do Degradê</a></li>
+            </ul>
+        </p>
+        <iframe id=tela name="frame" src="" frameborder="1">
+            <p>Infelizmente seu navegador não é compatível com isso.</p>
+        </iframe>
+        <p>
+            Quando você cria um iframe desse jeito, a tela fica em branco até clicarem em algum link. Tirando o parâmetro <em>src=" "</em> e adicionando o parâmetro <em>srcdoc=" "</em> conseguimos colocar códigos HTML para exibir no iframe.
+        </p>
     </main>
 </body>
 </html>
