@@ -1324,6 +1324,28 @@
         <p>
             Quando você cria um iframe desse jeito, a tela fica em branco até clicarem em algum link. Tirando o parâmetro <em>src=" "</em> e adicionando o parâmetro <em>srcdoc=" "</em> conseguimos colocar códigos HTML para exibir no iframe.
         </p>
+        <h3>Segurança do iframe</h3>
+        <p>
+            Se atentar na hora de colocar iframe no seu site, pois tem sites que capturam informações do usuário. Para bloquear essas possíveis ações, utilizar o parâmetro <em>sandbox="sandbox"</em> (é utilizado para isolar conteúdos não confiáveis em um iframe). Outra forma de deixar seu site mais seguro, utilizar o parâmetro <em>referrerpolicy=" "</em> (é uma ferramenta que controla a quantidade de informações de referência que os navegadores transmitem), o padrão é <em>referrerpolicy="no-referrer-when-downgrade"</em> (remove a referência ao fazer downgrade de protocolo, como de HTTPS para HTTP), se quiser tornar o que está carregado no iframe um pouco mais limitado, utilizar o parâmetro <em>referrerpolicy="no-referrer"</em> (o conteúdo que está carregado no iframe não vai coletar nenhuma informação do usuário). Então para uma segurança forte do iframe, utilizar os parâmetros <em>sandbox="sandbox"</em> + <em>referrerpolicy="no-referrer"</em> dentro da tag do iframe.
+        </p>
+        <p>
+            Se o iframe for da mesma origem conseguimos desligar algumas configurações, utilizamos também o parâmetro <em>sandbox=" "</em>, agora vou mostrar algumas configurações de sandbox:
+            <ul>
+                <li>sandbox="allow-same-origin" &rarr; permite que o conteúdo seja tratado sendo da mesma origem.</li>
+                <li>sandbox="allow-forms" &rarr; permite formulários.</li>
+                <li>sandbox="allow-scripts" &rarr; permite scripts.</li>
+                <li>sandbox="allow-orientation-lock" &rarr; permite bloquear a orientação da tela.</li>
+                <li>sandbox="allow-pointer-lock" &rarr; reativa as APIs de bloqueio do ponteiro dentro do iframe (API = é uma interface de programação de aplicativos (API) que permite que o usuário controle o cursor do mouse).</li>
+                <li>sandbox="allow-popups" &rarr; permite pop-ups.</li>
+                <li>sandbox="allow-popups-to-escape-sandbox" &rarr; permite que pop-ups abram novas janelas sem herdar o sandboxing.</li>
+                <li>sandbox="allow-top-navigation" &rarr; permite que o conteúdo navegue em seu contexto de navegação de nível superior.</li>
+                <li>sandbox="no-values" &rarr; aplica todas as restrições, desativando a maioria das funcionalidades do conteúdo incorporado.</li>
+            </ul>
+        </p>
+        <h3>Conteúdos dentro do iframe</h3>
+        <p>
+            Conseguimos adicionar vídeos do <a href="https://www.youtube.com/" rel="external" target="_blank">Youtube</a>, e do <a href="https://vimeo.com/" rel="external" target="_blank">Vímeo</a>, conseguimos adicionar o mapa do <a href="https://www.google.com.br/maps/" rel="external" target="_blank">Google Maps</a>, e do <a href="https://www.waze.com/pt-PT/live-map/" rel="external" target="_blank">Waze</a>, conseguimos adicionar planilhas, apresentações, etc do <a href="https://docs.google.com/document/u/0/?hl=pt-BR&pli=1" rel="external" target="_blank">Google Docs</a>. Basta copiar o código de Incorporação, normalmente conseguimos clicando em compartilhar, depois só copiar o código e colar. 
+        </p>
     </main>
 </body>
 </html>
