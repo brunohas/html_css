@@ -1347,6 +1347,62 @@
         <p>
             Conseguimos adicionar vídeos do <a href="https://www.youtube.com/" rel="external" target="_blank">Youtube</a>, e do <a href="https://vimeo.com/" rel="external" target="_blank">Vímeo</a>, conseguimos adicionar o mapa do <a href="https://www.google.com.br/maps/" rel="external" target="_blank">Google Maps</a>, e do <a href="https://www.waze.com/pt-PT/live-map/" rel="external" target="_blank">Waze</a>, conseguimos adicionar planilhas, apresentações, etc do <a href="https://docs.google.com/document/u/0/?hl=pt-BR&pli=1" rel="external" target="_blank">Google Docs</a>. Basta copiar o código de Incorporação, normalmente conseguimos clicando em compartilhar, depois só copiar o código e colar. 
         </p>
+        <h2>&diams; Formulários</h2>
+        <p>
+            Um formulário é um local onde o visitante consegue colocar dados. Para criar um formulário, utilizamos a tag &lt;form&gt;, todos os dados tem que estar entre a tag &lt;form&gt; e &lt;/form&gt;, para perguntar os dados do visitante, acrescentamos a tag &lt;input&gt; e para fazer uma ligação com o input acrescentamos a tag &lt;label&gt;. Segue um exemplo:
+        </p>
+    <pre><code>
+        <mark>&lt;form action="cadastro.php"&gt;</mark>                                   !- action = para onde os dados são enviados -!
+            &lt;p&gt;
+                <mark>&lt;label for="inome"&gt;Nome:&lt;/label&gt;</mark>                       !- label for="inome" fazendo a ligação com o input do nome -!
+                <mark>&lt;input type="text" name="nome" id="inome"&gt;</mark>             !- input:text para perguntar o nome -!
+            &lt;/p&gt;
+            &lt;p&gt;
+                <mark>&lt;label for="isobrenome"&gt;Sobrenome:&lt;/label&gt;</mark>             !- label for="isobrenome" fazendo a ligação com o input do sobrenome -!
+                <mark>&lt;input type="text" name="sobrenome" id="isobrenome"&gt;</mark>   !- input:text para perguntar o sobrenome -!
+            &lt;/p&gt;
+            &lt;p&gt;
+                <mark>&lt;input type="submit" value="Enviar"&gt;</mark>                   !- input:submit para criar um botão para enviar -!
+            &lt;/p&gt;
+        <mark>&lt;/form&gt;</mark>
+    </code></pre>
+        <p>
+            Existem vários tipos de input, agora vou citar alguns:
+        </p>
+        <h3>Tipos de input mais comuns</h3>
+        <ul>
+            <li>input hidden &rarr; uma entrada de formulário que está oculta, geralmente para armazenar valores que o usuário não precisa ver.</li>
+            <li>input text &rarr; define um campo de entrada de texto de linha única.</li>
+            <li>input password &rarr; define um campo de senha através de um asterisco.</li>
+            <li>input submit &rarr; define um botão para enviar dados do formulário.</li>
+            <li>input button &rarr; define um botão.</li>
+            <li>input radio &rarr; são conjuntos de botões que permite que o usuário selecione APENAS UMA das opções exibidas.</li>
+            <li>input checkbox &rarr; caixas de seleção permitem que um usuário selecione ZERO ou MAIS opções.</li>
+            <li>input search &rarr; é usado para campos de pesquisa.</li>
+            <li>input reset &rarr; define um botão de redefinição que redefinirá todos os valores do formulário para seus valores padrão.</li>
+        </ul>
+        <h3>Tipos de input com validação</h3>
+        <ul>
+            <li>input tel &rarr; é usado para inserir um número de telefone.</li>
+            <li>input url &rarr; valida que a entrada é uma URL.</li>
+            <li>input email &rarr; valida que a entrada é um email.</li>
+            <li>input number &rarr; define um campo de entrada numérico (você também pode definir restrições sobre quais números são aceitos).</li>
+            <li>input range &rarr; define um controle para inserir um número cujo valor exato não é importante (como um controle deslizante). O intervalo padrão é de 0 a 100 (no entanto, você pode definir restrições sobre quais números são aceitos com os atributos <em>min</em>, <em>max</em> e <em>:step</em>).</li>
+        </ul>
+        <h3>Tipos de input de data</h3>
+        <ul>
+            <li>input date &rarr; qualquer entrada de data.</li>
+            <li>input month &rarr; permite selecionar um único mês.</li>
+            <li>input week &rarr; permite que o usuário selecione uma semana e ano.</li>
+            <li>input time &rarr; permite selecionar um horário específico.</li>
+            <li>input datetime-local &rarr; permite selecionar a combinação de data/hora.</li>
+        </ul>
+        <h3>Outros tipos de input</h3>
+        <ul>
+            <li>input file &rarr; define um botão para carregar um arquivo para o servidor.</li>
+            <li>input image &rarr; o mais estranho de todos, para botões gráficos de envio (o caminho para a imagem é especificado no atributo src).</li>
+            <li>input color &rarr; é usado para campos de entrada que devem conter uma cor.</li>
+        </ul>
     </main>
 </body>
 </html>
