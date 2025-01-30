@@ -1352,33 +1352,39 @@
             Um formulário é um local onde o visitante consegue colocar dados. Para criar um formulário, utilizamos a tag &lt;form&gt;, todos os dados tem que estar entre a tag &lt;form&gt; e &lt;/form&gt;, para perguntar os dados do visitante, acrescentamos a tag &lt;input&gt; e para fazer uma ligação com o input acrescentamos a tag &lt;label&gt;. E também conseguimos adicionar um parâmetro <em>required</em> para que o campo não possa ser enviado sem nenhum caractere (conseguimos mudar o mínimo e o máximo de caracteres, minlength=" " e maxlength=" "), <em>placeholder=" "</em> para detalhar a caixa de pergunta, <em>size</em> para mudar o tamanho da caixa, colocar <em>autocomplete=" "</em> referente a pergunta, e também conseguimos agrupar os formulários envelopando com a tag &lt;fieldset&gt; (&lt;legend&gt; para dar uma legenda ao grupo). <br> Segue um exemplo:
         </p>
     <pre><code>
-        <mark>&lt;form action="cadastro.php"&gt;</mark>!- action = para onde os dados são enviados -!
-            &lt;p&gt;
-                <mark>&lt;label for="inome"&gt;Nome &lt;/label&gt;</mark>!- label for="inome" fazendo a ligação com o input do nome -!
-                <mark>&lt;input type="text" name="nome" id="inome" required placeholder="Digite seu nome"&gt;</mark>!- input:text para perguntar o nome -!
-            &lt;/p&gt;
-            &lt;p&gt;
-                <mark>&lt;label for="isobrenome"&gt;Sobrenome &lt;/label&gt;</mark>!- label for="isobrenome" fazendo a ligação com o input do sobrenome -!
-                <mark>&lt;input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome"&gt;</mark>!- input:text para perguntar o sobrenome -!
-            &lt;/p&gt;
-            &lt;p&gt;
-                <mark>&lt;input type="submit" value="Enviar"&gt;</mark>!- input:submit para criar um botão para enviar -!
-            &lt;/p&gt;
+        <mark>&lt;form action="cadastro.php"&gt;</mark> !- action = para onde os dados são enviados -!
+            <mark>&lt;fieldset&gt;</mark> !- para agrupar os formulários -!
+                <mark>&lt;legend&gt;Dados Pessoais&lt;/legend&gt;</mark> !- legenda ao grupo -!
+                &lt;p&gt;
+                    <mark>&lt;label for="inome"&gt;Nome &lt;/label&gt;</mark> !- label for="inome" fazendo a ligação com o input do nome -!
+                    <mark>&lt;input type="text" name="nome" id="inome" required placeholder="Digite seu nome"&gt;</mark> !- input:text para perguntar o nome -!  
+                &lt;/p&gt;
+                &lt;p&gt;
+                    <mark>&lt;label for="isobrenome"&gt;Sobrenome &lt;/label&gt;</mark> !- label for="isobrenome" fazendo a ligação com o input do sobrenome -! 
+                    <mark>&lt;input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome"&gt;</mark> !- input:text para perguntar o sobrenome -!
+                &lt;/p&gt;
+                &lt;p&gt;
+                    <mark>&lt;input type="submit" value="Enviar"&gt;</mark> !- input:submit para criar um botão para enviar -!
+                &lt;/p&gt;
+            <mark>&lt;/fieldset&gt;</mark>
         <mark>&lt;/form&gt;</mark>
     </code></pre>
         <p>
             Que no caso ficaria assim:
         </p>
         <form action="cadastro.php">
-            <p>
-                <label for="inome">Nome </label><input type="text" name="nome" id="inome" required placeholder="Digite seu nome">
-            </p>
-            <p>
-                <label for="isobrenome">Sobrenome </label><input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome">
-            </p>
-            <p>
-                <input type="submit" value="Enviar">
-            </p>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <p>
+                    <label for="inome">Nome </label><input type="text" name="nome" id="inome" required placeholder="Digite seu nome">
+                </p>
+                <p>
+                    <label for="isobrenome">Sobrenome </label><input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+            </fieldset>
         </form>
         <p>
             Existem vários tipos de input, agora vou citar alguns:
@@ -1390,7 +1396,7 @@
             <li>input password &rarr; define um campo de senha através de um asterisco.</li>
             <li>input submit &rarr; define um botão para enviar dados do formulário.</li>
             <li>input button &rarr; define um botão.</li>
-            <li>input radio &rarr; são conjuntos de botões que permite que o usuário selecione APENAS UMA das opções exibidas.</li>
+            <li>input radio &rarr; são conjuntos de botões que permite que o usuário selecione APENAS UMA das opções exibidas (colocar o mesmo name=" " nas opções e id=" " diferentes).</li>
             <li>input checkbox &rarr; caixas de seleção permitem que um usuário selecione ZERO ou MAIS opções.</li>
             <li>input search &rarr; é usado para campos de pesquisa.</li>
             <li>input reset &rarr; define um botão de redefinição que redefinirá todos os valores do formulário para seus valores padrão.</li>
@@ -1413,7 +1419,7 @@
         </ul>
         <h3>Outros tipos de input</h3>
         <ul>
-            <li>input file &rarr; define um botão para carregar um arquivo para o servidor.</li>
+            <li>input file &rarr; NO GET não funciona; define um botão para carregar um arquivo para o servidor (normalmente p/ enviar fotos).</li>
             <li>input image &rarr; o mais estranho de todos, para botões gráficos de envio (o caminho para a imagem é especificado no atributo src).</li>
             <li>input color &rarr; é usado para campos de entrada que devem conter uma cor.</li>
         </ul>
