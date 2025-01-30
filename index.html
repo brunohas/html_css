@@ -1349,23 +1349,37 @@
         </p>
         <h2>&diams; Formulários</h2>
         <p>
-            Um formulário é um local onde o visitante consegue colocar dados. Para criar um formulário, utilizamos a tag &lt;form&gt;, todos os dados tem que estar entre a tag &lt;form&gt; e &lt;/form&gt;, para perguntar os dados do visitante, acrescentamos a tag &lt;input&gt; e para fazer uma ligação com o input acrescentamos a tag &lt;label&gt;. Segue um exemplo:
+            Um formulário é um local onde o visitante consegue colocar dados. Para criar um formulário, utilizamos a tag &lt;form&gt;, todos os dados tem que estar entre a tag &lt;form&gt; e &lt;/form&gt;, para perguntar os dados do visitante, acrescentamos a tag &lt;input&gt; e para fazer uma ligação com o input acrescentamos a tag &lt;label&gt;. E também conseguimos adicionar um parâmetro <em>required</em> para que o campo não possa ser enviado sem nenhum caractere (conseguimos mudar o mínimo e o máximo de caracteres, minlength=" " e maxlength=" "), <em>placeholder=" "</em> para detalhar a caixa de pergunta, <em>size</em> para mudar o tamanho da caixa, colocar <em>autocomplete=" "</em> referente a pergunta, e também conseguimos agrupar os formulários envelopando com a tag &lt;fieldset&gt; (&lt;legend&gt; para dar uma legenda ao grupo). <br> Segue um exemplo:
         </p>
     <pre><code>
-        <mark>&lt;form action="cadastro.php"&gt;</mark>                                   !- action = para onde os dados são enviados -!
+        <mark>&lt;form action="cadastro.php"&gt;</mark>!- action = para onde os dados são enviados -!
             &lt;p&gt;
-                <mark>&lt;label for="inome"&gt;Nome:&lt;/label&gt;</mark>                       !- label for="inome" fazendo a ligação com o input do nome -!
-                <mark>&lt;input type="text" name="nome" id="inome"&gt;</mark>             !- input:text para perguntar o nome -!
+                <mark>&lt;label for="inome"&gt;Nome &lt;/label&gt;</mark>!- label for="inome" fazendo a ligação com o input do nome -!
+                <mark>&lt;input type="text" name="nome" id="inome" required placeholder="Digite seu nome"&gt;</mark>!- input:text para perguntar o nome -!
             &lt;/p&gt;
             &lt;p&gt;
-                <mark>&lt;label for="isobrenome"&gt;Sobrenome:&lt;/label&gt;</mark>             !- label for="isobrenome" fazendo a ligação com o input do sobrenome -!
-                <mark>&lt;input type="text" name="sobrenome" id="isobrenome"&gt;</mark>   !- input:text para perguntar o sobrenome -!
+                <mark>&lt;label for="isobrenome"&gt;Sobrenome &lt;/label&gt;</mark>!- label for="isobrenome" fazendo a ligação com o input do sobrenome -!
+                <mark>&lt;input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome"&gt;</mark>!- input:text para perguntar o sobrenome -!
             &lt;/p&gt;
             &lt;p&gt;
-                <mark>&lt;input type="submit" value="Enviar"&gt;</mark>                   !- input:submit para criar um botão para enviar -!
+                <mark>&lt;input type="submit" value="Enviar"&gt;</mark>!- input:submit para criar um botão para enviar -!
             &lt;/p&gt;
         <mark>&lt;/form&gt;</mark>
     </code></pre>
+        <p>
+            Que no caso ficaria assim:
+        </p>
+        <form action="cadastro.php">
+            <p>
+                <label for="inome">Nome </label><input type="text" name="nome" id="inome" required placeholder="Digite seu nome">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome </label><input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
         <p>
             Existem vários tipos de input, agora vou citar alguns:
         </p>
@@ -1383,7 +1397,7 @@
         </ul>
         <h3>Tipos de input com validação</h3>
         <ul>
-            <li>input tel &rarr; é usado para inserir um número de telefone.</li>
+            <li>input tel &rarr; é usado para inserir um número de telefone (pattern="^\(\d{2}\)\d{4, 5}-\d{4}$" &rarr; para aceitar somente números (xx)xxxx-xxxx ou (xx)xxxxx-xxxx).</li>
             <li>input url &rarr; valida que a entrada é uma URL.</li>
             <li>input email &rarr; valida que a entrada é um email.</li>
             <li>input number &rarr; define um campo de entrada numérico (você também pode definir restrições sobre quais números são aceitos).</li>
@@ -1404,7 +1418,7 @@
             <li>input color &rarr; é usado para campos de entrada que devem conter uma cor.</li>
         </ul>
         <p>
-            Existem 2 tipos de métodos para envio de formulário, GET (padrão) e POST. Temos que adicionar o parâmetro <em>method=" "</em> para conseguimos mudar o método de envio, o GET é utilizado quando os dados não forem sensíveis (nome, peso, altura, nascimento, etc...), quando utilizar o método GET só podemos enviar até 3000 bits (aproximadamente 3000 letras). O POST é utilizado quando os dados são mais sensíveis (senha, foto, número de cartão de crédito, quando os dados excedem os 3000 bits, etc...). O mais ideal para a proteção de dados, é utilizar o HTTPS (estudar mais para frente).
+            Existem 2 tipos de métodos para envio de formulário, GET (padrão) e POST. Temos que adicionar o parâmetro <em>method=" "</em> para conseguimos mudar o método de envio, o GET é utilizado quando os dados não forem sensíveis (nome, peso, altura, nascimento, etc...), quando utilizar o método GET só podemos enviar até 3000 bits (aproximadamente 3000 letras). O POST é utilizado quando os dados são mais sensíveis (senha, foto, número de cartão de crédito, quando os dados excedem os 3000 bits, etc...). O mais ideal para a proteção de dados, é utilizar o HTTPS (estudar mais para frente HTTPS e RegEx = espressões regulares).
         </p>
     </main>
 </body>
