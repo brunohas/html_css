@@ -1403,6 +1403,9 @@
             <li>input image &rarr; o mais estranho de todos, para botões gráficos de envio (o caminho para a imagem é especificado no atributo src).</li>
             <li>input color &rarr; é usado para campos de entrada que devem conter uma cor.</li>
         </ul>
+        <p>
+            Existem 2 tipos de métodos para envio de formulário, GET (padrão) e POST. Temos que adicionar o parâmetro <em>method=" "</em> para conseguimos mudar o método de envio, o GET é utilizado quando os dados não forem sensíveis (nome, peso, altura, nascimento, etc...), quando utilizar o método GET só podemos enviar até 3000 bits (aproximadamente 3000 letras). O POST é utilizado quando os dados são mais sensíveis (senha, foto, número de cartão de crédito, quando os dados excedem os 3000 bits, etc...). O mais ideal para a proteção de dados, é utilizar o HTTPS (estudar mais para frente).
+        </p>
     </main>
 </body>
 </html>
